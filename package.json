@@ -1,0 +1,13 @@
+{
+  "name": "aumaru",
+  "version": "1.0.0",
+  "description": "aumaru ecommerce",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "tailwind": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.7"
+  }
+}

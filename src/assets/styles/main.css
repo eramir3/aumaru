@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "nexa";
+  src: url(../fonts/NexaRegular.otf);
+}
+
+@font-face {
+  font-family: "nexa-light";
+  src: url(../fonts/NexaLight.otf);
+}
+
+@font-face {
+  font-family: "nexa-bold";
+  src: url(../fonts/NexaBold.otf);
+}
+
+@font-face {
+  font-family: "abril-fatface";
+  src: url(../fonts/AbrilFatface-Regular.ttf);
+}
