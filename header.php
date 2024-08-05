@@ -95,7 +95,9 @@
             href="/cart"
             class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 lg:block hidden"
           >
-            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+            <i class="fa-solid fa-cart-shopping fa-lg">
+              <span class="cart-counter text-xs"><?php echo WC()->cart->get_cart_contents_count() ?></span>
+            </i>
           </a>
         </li>
       </ul>

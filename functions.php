@@ -38,3 +38,12 @@ function aumaru_features() {
 }
 
 add_action('after_setup_theme', 'aumaru_features');
+
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'cart_counter_add_to_cart_fragment' );
+
+function cart_counter_add_to_cart_fragment( $fragments ) {
+  $fragments[ '.cart-counter' ] = '<span class="cart-counter text-xs">'. WC()->cart->get_cart_contents_count() .'</span>';
+ 	return $fragments;
+
+ }
