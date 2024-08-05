@@ -2026,41 +2026,12 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-red-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
 .bg-\[url\(\'\.\/assets\/images\/footer\.png\'\)\]{
   background-image: url('./assets/images/footer.png');
 }
 
-.bg-\[url\(\'\.\/images\/landing-bg\.png\'\)\]{
-  background-image: url('./images/landing-bg.png');
-}
-
 .bg-\[url\(\'\.\/assets\/images\/landing-bg\.png\'\)\]{
   background-image: url('./assets/images/landing-bg.png');
-}
-
-.bg-\[url\(\'images\/landing-bg\.png\'\)\]{
-  background-image: url('images/landing-bg.png');
-}
-
-.bg-\[url\(\'\/images\/landing-bg\.png\'\)\]{
-  background-image: url('/images/landing-bg.png');
-}
-
-.bg-\[url\(\'src\/assets\/images\/landing-bg\.png\'\)\]{
-  background-image: url('src/assets/images/landing-bg.png');
-}
-
-.bg-\[url\(\'\.\/src\/assets\/images\/landing-bg\.png\'\)\]{
-  background-image: url('./src/assets/images/landing-bg.png');
-}
-
-.bg-\[url\(\'\/assets\/images\/landing-bg\.png\'\)\]{
-  background-image: url('/assets/images/landing-bg.png');
 }
 
 .decoration-slice{

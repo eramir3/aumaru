@@ -61,7 +61,7 @@
         </li>
         <li>
           <a
-            href="<?php echo site_url('/products') ?>"
+            href="<?php echo site_url('/shop') ?>"
             class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
           >
             <span>PRODUITS</span>
@@ -92,7 +92,7 @@
         </li>
         <li>
           <a
-            href="/about"
+            href="/cart"
             class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 lg:block hidden"
           >
             <i class="fa-solid fa-cart-shopping fa-lg"></i>
