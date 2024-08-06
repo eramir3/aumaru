@@ -275,4 +275,41 @@ ul.tabs .active::after {
 .woocommerce-cart-form__cart-item .attachment-woocommerce_thumbnail {
   width: 130px;
 }
+
+.coupon #coupon_code {
+  color: black;
+  width: 200px;
+  padding: 6px 12px;
+  border-radius: 2px;
+  margin-right: 6px;
+  width: 100%;
+  @media (width > 576px) {
+    width: 48%;
+  }
+}
+
+.coupon .input-text+.button {
+  margin-top: 10px;
+  width: 100% !important;
+  @media (width > 576px) {
+    margin-top: 0;
+    width: 48% !important;
+  }
+}
+
+.woocommerce .cart .button{
+  background-color: #598170;
+  color: white;
+  padding: 10px 40px;
+}
+
+td, th {
+  padding: .7em 1em;
+  border-width: 0.1px 0px 0.1px 0px;
+}
+
+td.actions {
+  padding-top: 30px !important;
+  border-bottom: transparent;
+}
 /* cart */
