@@ -92,7 +92,7 @@
         </li>
         <li>
           <a
-            href="/cart"
+            href="<?php echo site_url('/cart') ?>"
             class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 lg:block hidden"
           >
             <i class="fa-solid fa-cart-shopping fa-lg">
