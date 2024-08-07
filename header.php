@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
-<body class="h-full m-0 bg-cover bg-center bg-[url('./assets/images/landing-bg.png')]">
+<body class="h-full bg-no-repeat bg-cover bg-fixed
+  <?php 
+    if(is_shop()) echo "bg-[url('./assets/images/produits-bg.png')]";
+    else if(!$pagename) echo "bg-[url('./assets/images/landing-bg.png')]";
+    else echo "bg-[url('./assets/images/about-us-bg.png')]";
+  ?>">
   <header
     class="flex flex-col lg:flex-row xl:justify-between justify-center items-center bg-[#F9F6F2]"
     >

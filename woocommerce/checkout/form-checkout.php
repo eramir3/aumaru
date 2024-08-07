@@ -1,4 +1,5 @@
-<div style="color: red;">JAJJAA<div>
+<div class="flex flex-col h-screen">
+<div class="max-w-screen-xxl m-auto py-16 flex-grow text-white">
 <?php
 /**
  * Checkout Form
@@ -65,3 +66,6 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 </form>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+</div>
+<?php get_footer( 'shop' ); ?>
+</div>

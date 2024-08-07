@@ -259,7 +259,6 @@ ul.tabs .active::after {
   padding-left: 5px;
   max-width: 60px;
 }
-/* single product */
 
 /* cart */
 .woocommerce-cart-form {
@@ -312,4 +311,29 @@ td.actions {
   padding-top: 30px !important;
   border-bottom: transparent;
 }
-/* cart */
+
+
+/* checkout */
+
+.woocommerce-checkout {
+  background-color: rgb(0 0 0 / 0.55);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.woocommerce-checkout  input,
+.woocommerce-checkout  textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  outline: 0;
+  line-height: 1;
+  padding: 15px;
+  color: black;
+  border-radius: 5px;
+}
+
+#order_review_heading {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
