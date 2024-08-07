@@ -337,3 +337,10 @@ td.actions {
   margin-top: 50px;
   margin-bottom: 20px;
 }
+
+/* empty cart */
+
+.woocommerce .return-to-shop .wc-backward {
+  color: white;
+  background-color: #598170;
+}
