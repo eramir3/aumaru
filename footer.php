@@ -35,10 +35,10 @@ jQuery(document).ready(function($) {
   });
 
   $('body').on('added_to_cart', function() {
-      const button = document.getElementsByClassName('adding_to_cart')
-      $(button).text('Added to Cart');
-      $(button).css('pointer-events', 'auto');
-      $(button).css('filter', 'brightness(1)');
+    const button = document.getElementsByClassName('adding_to_cart')
+    $(button).text('Added to Cart');
+    $(button).css('pointer-events', 'auto');
+    $(button).css('filter', 'brightness(1)');
   });
 });
 
