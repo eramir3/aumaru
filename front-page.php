@@ -1,8 +1,8 @@
 <?php get_header();?>
   <main
-    class="max-w-screen-xxl m-auto flex relative flex-col py-16 lg:h-[calc(100vh_-_124px)] h-[calc(100vh_-_86px)]"
+    class="max-w-screen-xxl m-auto flex flex-col py-16 lg:h-[calc(100vh_-_124px)] h-[calc(100vh_-_86px)]"
   >
-    <div class="flex lg:justify-center flex-grow">
+    <div class="flex flex-col lg:justify-center flex-grow lg:relative">
       <div class="w-full">
         <div
           id="myCarousel"
@@ -37,20 +37,20 @@
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="md:block hidden w-fit lg:-rotate-90 top-96 -left-28 lg:text-left lg:absolute md:m-auto md:text-center md:mb-24"
-    >
-      <div class="text-[#F9F8EA] font-montserrat text-6xl">AUMARÚ</div>
-      <div class="text-[#F9F8EA] text-3xl" style="font-family: nexa-light">
-        LE NECTAR DE LA NATURE
+      <div
+        class="md:block hidden top-[190px] w-fit lg:-rotate-90 -left-28 lg:text-left lg:absolute md:m-auto md:text-center md:mb-12 md:mt-12 lg:m-0"
+      >
+        <div class="text-[#F9F8EA] font-montserrat text-6xl">AUMARÚ</div>
+        <div class="text-[#F9F8EA] text-3xl" style="font-family: nexa-light">
+          LE NECTAR DE LA NATURE
+        </div>
       </div>
-    </div>
-    <div class="w-fit top-[450px] right-12 lg:absolute m-auto">
-      <div class="flex lg:flex-col gap-5">
-        <i class="fa-brands fa-instagram text-[#F9F8EA] text-4xl"></i>
-        <i class="fa-brands fa-facebook text-[#F9F8EA] text-4xl"></i>
-        <i class="fa-brands fa-whatsapp text-[#F9F8EA] text-4xl"></i>
+      <div class="w-fit top-[280px] right-12 lg:absolute m-auto mt-12 lg:m-0">
+        <div class="flex lg:flex-col gap-5">
+          <i class="fa-brands fa-instagram text-[#F9F8EA] text-4xl"></i>
+          <i class="fa-brands fa-facebook text-[#F9F8EA] text-4xl"></i>
+          <i class="fa-brands fa-whatsapp text-[#F9F8EA] text-4xl"></i>
+        </div>
       </div>
     </div>
     <div

@@ -695,6 +695,22 @@ video {
   top: 450px;
 }
 
+.top-80{
+  top: 20rem;
+}
+
+.top-72{
+  top: 18rem;
+}
+
+.top-\[190px\]{
+  top: 190px;
+}
+
+.top-\[280px\]{
+  top: 280px;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -2026,6 +2042,11 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-red-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\/assets\/images\/about-us-bg\.png\'\)\]{
   background-image: url('./assets/images/about-us-bg.png');
 }
@@ -2911,6 +2932,14 @@ video {
     margin-bottom: 6rem;
   }
 
+  .md\:mt-12{
+    margin-top: 3rem;
+  }
+
+  .md\:mb-12{
+    margin-bottom: 3rem;
+  }
+
   .md\:block{
     display: block;
   }
@@ -2929,8 +2958,16 @@ video {
     position: absolute;
   }
 
+  .lg\:relative{
+    position: relative;
+  }
+
   .lg\:col-span-2{
     grid-column: span 2 / span 2;
+  }
+
+  .lg\:m-0{
+    margin: 0px;
   }
 
   .lg\:my-2{
