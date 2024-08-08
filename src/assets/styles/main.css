@@ -23,7 +23,7 @@
   src: url(../fonts/AbrilFatface-Regular.ttf);
 }
 
-/* woocommerce */
+/* shop */
 .size-auto,
 .size-full,
 .size-large,
@@ -79,6 +79,10 @@ ul.products > li {
   color: #384238;
   padding: 20px;
   border-radius: 10px;
+}
+
+a.added_to_cart.wc-forward {
+  display: none;
 }
 
 /* single product */
