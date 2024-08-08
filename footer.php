@@ -13,7 +13,7 @@
       <img src="<?php echo get_theme_file_uri('/src/assets/images/green-logo.png'); ?>" />
       <p class="pt-4">CI RADCO - GRANSAMAN PULPE DE FRUIT</p>
       <p style="font-family: nexa-light">TOUS LES DROITS SONT RESERVÉS</p>
-      <p>Copyright &copy; 2024</p>
+      <p>Copyright &copy; <?php echo date('Y'); ?></p>
     </div>
     <div class="flex justify-center gap-6 my-12">
       <i class="fa-brands fa-instagram text-[#598170] text-4xl"></i>
