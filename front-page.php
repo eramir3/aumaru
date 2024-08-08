@@ -2,7 +2,7 @@
   <main
     class="max-w-screen-xxl m-auto flex flex-col py-16 lg:h-[calc(100vh_-_124px)] h-[calc(100vh_-_86px)]"
   >
-    <div class="flex flex-col lg:justify-center flex-grow lg:relative">
+    <div class="flex flex-col flex-grow lg:relative">
       <div class="w-full">
         <div
           id="myCarousel"
