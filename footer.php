@@ -1,9 +1,9 @@
 <footer
   style="font-family: nexa-bold"
-  class="bg-no-repeat bg-cover bg-[url('./assets/images/footer.png')] bg-[#F9F6F2] py-8"
+  class="bg-no-repeat bg-cover bg-[url('./assets/images/footer.png')] bg-[#F9F6F2] pt-2 pb-10"
 >
   <div
-    class="max-w-screen-xxl m-auto mt-12 lg:flex lg:justify-between lg:items-center lg:mt-2 lg:pb-12"
+    class="max-w-screen-xxl m-auto mt-12 lg:flex lg:justify-between lg:items-center lg:mt-2"
   >
     <div class="flex flex-col items-center font-extrabold lg:items-start">
       <a>Mentions Légales</a>
