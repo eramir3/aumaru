@@ -40,10 +40,18 @@ function aumaru_features() {
 add_action('after_setup_theme', 'aumaru_features');
 
 
+// update cart in shop section
 add_filter( 'woocommerce_add_to_cart_fragments', 'cart_counter_add_to_cart_fragment' );
-
 function cart_counter_add_to_cart_fragment( $fragments ) {
-  $fragments[ '.cart-counter' ] = '<span class="cart-counter text-xs">'. WC()->cart->get_cart_contents_count() .'</span>';
+  $fragments[ '.cart-counter' ] = '<span class="cart-counter mt-2">'. WC()->cart->get_cart_contents_count() .'</span>';
  	return $fragments;
 
- }
+}
+
+// update cart in cart section
+function enqueue_wc_cart_fragments_script() {
+  if(function_exists('is_cart') && is_cart()) {
+    wp_enqueue_script('wc-cart-fragments');
+  }
+}
+add_action('wp_enqueue_scripts', 'enqueue_wc_cart_fragments_script');

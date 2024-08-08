@@ -96,13 +96,11 @@
           </a>
         </li>
         <li>
-          <a
-            href="<?php echo site_url('/cart') ?>"
-            class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 lg:block hidden"
-          >
-            <i class="fa-solid fa-cart-shopping fa-lg">
-              <span class="cart-counter text-xs"><?php echo WC()->cart->get_cart_contents_count() ?></span>
-            </i>
+          <a href="<?php echo site_url('/cart') ?>">
+            <div class="flex items-center text-[#598170]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#598170" viewBox="0 0 256 256"><path d="M239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM88,200a16,16,0,1,0,16,16A16,16,0,0,0,88,200Zm104,0a16,16,0,1,0,16,16A16,16,0,0,0,192,200Z"></path></svg>
+              <span  id="mini-cart-count" class="cart-counter mt-2"><?php echo WC()->cart->get_cart_contents_count() ?></span>
+            </div>
           </a>
         </li>
       </ul>

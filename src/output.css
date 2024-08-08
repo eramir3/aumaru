@@ -788,6 +788,10 @@ video {
   margin-left: 3rem;
 }
 
+.ml-2{
+  margin-left: 0.5rem;
+}
+
 .mt-1{
   margin-top: 0.25rem;
 }
@@ -810,10 +814,6 @@ video {
 
 .mt-6{
   margin-top: 1.5rem;
-}
-
-.ml-2{
-  margin-left: 0.5rem;
 }
 
 .box-border{
@@ -2336,11 +2336,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .font-bold{
   font-weight: 700;
 }
@@ -3025,10 +3020,6 @@ video {
 
   .lg\:items-center{
     align-items: center;
-  }
-
-  .lg\:justify-center{
-    justify-content: center;
   }
 
   .lg\:justify-between{
