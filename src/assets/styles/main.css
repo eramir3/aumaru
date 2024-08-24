@@ -342,8 +342,7 @@ td.actions {
   margin-bottom: 20px;
 }
 
-.woocommerce-checkout #payment,
-iframe * {
+.woocommerce-checkout #payment {
   color: #515151 !important;
 }
 
@@ -352,4 +351,28 @@ iframe * {
 .woocommerce .return-to-shop .wc-backward {
   color: white;
   background-color: #598170;
+}
+
+/* contact */
+
+form.wpcf7-form.init label {
+  color: #efc897;
+}
+
+.wpcf7-form-control {
+  border-radius: 6px;
+  height: 3rem;
+  min-width: 300px;
+  padding-left: 8px;
+
+  @media (width > 992px) {
+    min-width: 800px;
+  }
+}
+
+.wpcf7-form-control.has-spinner {
+  background-color: #598170;
+  padding: 16px 32px;
+  width: 160px;
+  cursor: pointer;
 }
