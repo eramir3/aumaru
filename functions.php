@@ -55,3 +55,12 @@ function enqueue_wc_cart_fragments_script() {
   }
 }
 add_action('wp_enqueue_scripts', 'enqueue_wc_cart_fragments_script');
+
+
+add_filter( 'woocommerce_page_title', 'new_woocommerce_page_title');
+  
+function new_woocommerce_page_title( $page_title ) {
+  
+  if( $page_title == 'PRODUITS' ) return "";
+  return $page_title;
+}

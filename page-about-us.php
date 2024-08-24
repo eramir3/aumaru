@@ -57,37 +57,34 @@
             class="text-[#EFC897] font-extrabold text-3xl bg-[#D9D9D9]/30 pl-12 pt-2 max-w-96"
           >
             NOTRE HISTOIRE
-          </h2>
-          <div class="ml-12 mt-12 border-t-[1px] border-white max-w-80 hidden lg:block"></div>
-          <div class="flex flex-col lg:flex-row">
-            <div class="mb-12 pt-8 pl-12">
-              <p class="pt-2">
-              En septembre 1999, l’Association des fruiticulteurs d’Anapoima (AFA) a été créée par quatre 
-              agriculteurs qui cherchaient à valoriser les récoltes de fruits tropicaux des paysans de 
-              la région du Tequendama. Ainsi, ils ont imaginé différents procédés de 
-              transformation pour produire des produits 100% naturels tels que la pulpe de 
-              fruits surgelée, les confitures et les bonbons, tous fabriqués à partir de fruits tropicaux 
-              de la région.
-              </p>
-              <p class="pt-2">
-              Vingt et un ans plus tard, Aumarú est né d’une initiative visant à amener 
-              ces produits du cœur du Tequendama à Lyon et dans d’autres villes en France.
-              </p>
+          </h2>  
+            <div class="mb-12 pt-8 pl-12 lg:columns-2 columns-1">
+              L’histoire de ce projet a plus de 30 ans et englobe trois générations d’une même famille
+              d’entrepreneurs colombiens. Inspirés du potentiel et de la richesse naturelle de la
+              Colombie, et après de plusieurs années de travail marqués par des événements
+              mondiales, le chapitre qui aujourd’hui prennent la forme d’Aumarú – pulpe de fruit a
+              commencé au début de 2023 à Lyon, France.
+              <br/>
+              <br/>
+              Du fait de ses vallées comme à ses montagnes, en passant par ses esplanades, la
+              Colombie est un des pays avec la plus grande variété de fruits au monde. Notre rêve a
+              été de partager cette richesse naturelle avec le monde, en proposant une gamme 100%
+              naturelle, sans sucres ajoutés de pulpes de fruits afin d’offrir à nos clients une
+              expérience authentique de la gastronomie colombienne. Grâce au savoir-faire des
+              producteurs colombiens, avec lesquels nous travaillons de la main, nos pulpes ont la
+              véritable saveur des fruits de la Colombie.
+              <br/>
+              <br/>
+              Nos fruits exotiques dont le corossol, la curuba, la feijoa, la goyave, le lulo, le maracuja,
+              la mûre des Andes, et le tamarillo vous permettront d’apporter une nouvelle gamme de
+              saveurs et d’arômes à vos cocktails, glaces, confitures, pâtes de fruit, sauces, desserts,
+              et bien d&#39;autres choses!
+              <br/>
+              <br/>
+              Ainsi, depuis 2023, nous faisons découvrir la vraie richesse naturelle de la Colombie
+              aux professionnels comme aux particuliers dans les différents bars, les restaurants et
+              les glaciers de Lyon, Marseille et Paris et ailleurs.
             </div>
-            <div class="mb-12 pt-8 pl-12">
-              <p class="pt-2">
-                D’une part, en travaillant avec les agriculteurs de la région colombienne, 
-                nous cherchons à leur payer un juste prix pour leur récolte, quelque soit la saison.
-              </p>
-              <p class="pt-2">
-              De plus, nous cherchons à réduire leurs coûts de transport et de stockage des fruits. 
-              De cette manière, les agriculteurs ne se préoccupent que de récolter les fruits de 
-              la plus haute qualité sans se soucier constamment de les vendre. D’autre part, nous cherchons 
-              à informer les  consommateurs étrangers sur les fruits exotiques, tout en mettant à 
-              leur disposition des produits alimentaires 100% naturels.
-              </p>
-            </div>
-          </div>
         </div>
       </aside>
     </div>
