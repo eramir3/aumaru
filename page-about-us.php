@@ -12,7 +12,10 @@
       class="text-white p-6 mx-2 mt-12 bg-[#131313]/50"
     >
       <h2 class="text-[#EFC897] font-extrabold text-3xl">TEQUENDAMA</h2>
-      <p class="pt-8"><?php the_content(); ?></p>
+      <p class="pt-8">Grâce à sa position géographique privilégiée, la Colombie profite d’une diversité 
+        de zones climatiques qui lui permettent d’avoir des récoltes tout au long de l’année une grande 
+        variété de fruits et légumes. Voici juste un petit exemple de la richesse naturelle qu’elle a à 
+        offrir et à partager avec le monde.</p>
     </div>
     <div class="flex flex-col lg:flex-row pt-24">
       <aside class="pt-24">

@@ -2204,9 +2204,8 @@ video {
   padding-bottom: 1rem;
 }
 
-.py-8{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.pb-10{
+  padding-bottom: 2.5rem;
 }
 
 .pl-12{
@@ -2235,14 +2234,6 @@ video {
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pb-4{
-  padding-bottom: 1rem;
-}
-
-.pb-10{
-  padding-bottom: 2.5rem;
 }
 
 .text-left{
@@ -3049,10 +3040,6 @@ video {
   .lg\:px-3{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-  }
-
-  .lg\:pb-12{
-    padding-bottom: 3rem;
   }
 
   .lg\:pr-10{
