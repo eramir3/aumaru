@@ -5,7 +5,7 @@
       while(have_posts()) {
         the_post(); ?>
         <div>
-          <h2 class="text-white"><?php the_title(); ?></h2>
+          <!-- <h2 class="text-white m-auto mb-12"><?php the_title(); ?></h2> -->
           <div class="text-white">
             <?php the_content(); ?>
           </div>

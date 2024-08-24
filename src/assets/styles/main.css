@@ -343,7 +343,7 @@ td.actions {
 }
 
 .woocommerce-checkout #payment,
-.p-FieldLabel.Label {
+label.p-FieldLabel.Label.Label--empty {
   color: #515151;
 }
 
