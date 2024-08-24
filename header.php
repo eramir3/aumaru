@@ -9,6 +9,8 @@
   <?php 
     if(is_shop()) echo "bg-[url('./assets/images/produits-bg.png')]";
     else if(!$pagename) echo "bg-[url('./assets/images/landing-bg.png')]";
+    else if($pagename == 'mentions-legales') echo "";
+    else if($pagename == 'conditionnes-generales-de-vente') echo "";
     else echo "bg-[url('./assets/images/about-us-bg.png')]";
   ?>">
   <header

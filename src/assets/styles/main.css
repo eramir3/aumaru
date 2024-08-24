@@ -342,7 +342,8 @@ td.actions {
   margin-bottom: 20px;
 }
 
-.woocommerce-checkout #payment {
+.woocommerce-checkout #payment,
+.p-FieldLabel.Label {
   color: #515151;
 }
 
