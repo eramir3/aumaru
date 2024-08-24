@@ -1,5 +1,5 @@
 <div class="flex flex-col h-screen">
-<div class="max-w-screen-xxl m-auto py-16 flex-grow text-red-600">
+<div class="max-w-screen-xxl m-auto py-16 flex-grow text-white">
 <?php
 /**
  * Checkout Form
