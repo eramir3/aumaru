@@ -47,9 +47,15 @@
       </div>
       <div class="w-fit top-[280px] right-12 lg:absolute m-auto mt-12 lg:m-0">
         <div class="flex lg:flex-col gap-5">
-          <i class="fa-brands fa-instagram text-[#F9F8EA] text-4xl"></i>
-          <i class="fa-brands fa-facebook text-[#F9F8EA] text-4xl"></i>
-          <i class="fa-brands fa-whatsapp text-[#F9F8EA] text-4xl"></i>
+          <a href="https://www.instagram.com/aumaru_officiel/" target="_blank">
+            <i class="fa-brands fa-instagram text-[#F9F8EA] text-4xl"></i>
+          </a>
+          <a href="https://www.facebook.com/people/Aumar%C3%BA-Pulpe-de-Fruit/100088791141039/" target="_blank">
+            <i class="fa-brands fa-facebook text-[#F9F8EA] text-4xl"></i>
+          </a>
+          <a href="https://wa.me/33788225586" target="_blank">
+            <i class="fa-brands fa-whatsapp text-[#F9F8EA] text-4xl"></i>
+          </a>
         </div>
       </div>
     </div>

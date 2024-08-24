@@ -6,8 +6,8 @@
     class="max-w-screen-xxl m-auto mt-12 lg:flex lg:justify-between lg:items-center lg:mt-2"
   >
     <div class="flex flex-col items-center font-extrabold lg:items-start">
-      <a>Mentions Légales</a>
-      <a>Conditionnes Generales De Vente</a>
+      <a href="<?php echo site_url('/mentions-legales') ?>">Mentions Légales</a>
+      <a href="<?php echo site_url('/conditionnes-generales-de-vente') ?>">Conditionnes Generales De Vente</a>
     </div>
     <div class="flex flex-col items-center mt-12 lg:mt-6 lg:mr-32">
       <img src="<?php echo get_theme_file_uri('/src/assets/images/green-logo.png'); ?>" />
@@ -16,9 +16,15 @@
       <p>Copyright &copy; <?php echo date('Y'); ?></p>
     </div>
     <div class="flex justify-center gap-6 my-12">
-      <i class="fa-brands fa-instagram text-[#598170] text-4xl"></i>
-      <i class="fa-brands fa-facebook text-[#598170] text-4xl"></i>
-      <i class="fa-brands fa-whatsapp text-[#598170] text-4xl"></i>
+      <a href="https://www.instagram.com/aumaru_officiel/" target="_blank">
+        <i class="fa-brands fa-instagram text-[#598170] text-4xl"></i>
+      </a>
+      <a href="https://www.facebook.com/people/Aumar%C3%BA-Pulpe-de-Fruit/100088791141039/" target="_blank">
+        <i class="fa-brands fa-facebook text-[#598170] text-4xl"></i>
+      </a>
+      <a href="https://wa.me/33788225586" target="_blank">
+        <i class="fa-brands fa-whatsapp text-[#598170] text-4xl"></i>
+      </a>
     </div>
   </div>
 </footer>

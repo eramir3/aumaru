@@ -342,6 +342,10 @@ td.actions {
   margin-bottom: 20px;
 }
 
+.woocommerce-checkout #payment {
+  color: #515151;
+}
+
 /* empty cart */
 
 .woocommerce .return-to-shop .wc-backward {
