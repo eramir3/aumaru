@@ -383,3 +383,7 @@ form.wpcf7-form p {
   max-width: 160px;
   cursor: pointer;
 }
+
+form.wpcf7-form p:last-child {
+  text-align: center;
+}
