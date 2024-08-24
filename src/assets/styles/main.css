@@ -357,6 +357,7 @@ td.actions {
 
 form.wpcf7-form label {
   color: #efc897;
+  font-family: sans-serif;
 }
 
 form.wpcf7-form p {
@@ -369,9 +370,11 @@ form.wpcf7-form p {
   min-width: 300px;
   padding-left: 8px;
 
+  /*
   @media (width > 992px) {
     min-width: 800px;
   }
+    */
 }
 
 .wpcf7-form-control.has-spinner {
