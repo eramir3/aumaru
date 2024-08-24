@@ -384,6 +384,6 @@ form.wpcf7-form p {
   cursor: pointer;
 }
 
-form.wpcf7-form p:last-child {
+.wpcf7-form p:last-child {
   text-align: center;
 }
