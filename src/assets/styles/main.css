@@ -366,6 +366,7 @@ form.wpcf7-form p {
 
 .wpcf7-form-control.wpcf7-text,
 .wpcf7-form-control.wpcf7-textarea {
+  color: black;
   border-radius: 6px;
   height: 3rem;
   min-width: 300px;
@@ -376,6 +377,10 @@ form.wpcf7-form p {
   }
 }
 
+.wpcf7-form-control.wpcf7-text {
+  height: 180px;
+}
+
 .wpcf7-form-control.wpcf7-submit {
   border-radius: 6px;
   background-color: #598170;
@@ -384,6 +389,10 @@ form.wpcf7-form p {
   cursor: pointer;
 }
 
-.wpcf7-form p:last-child {
+form.wpcf7-form p:last-child {
   text-align: center;
+}
+
+.wpcf7-spinner {
+  background: #598170;
 }
