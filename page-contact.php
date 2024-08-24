@@ -19,18 +19,6 @@
       <p class="pt-8 max-w-96" style="font-family: nexa-light"><?php the_content(); ?></p>
     </div>
     <div class="flex flex-col items-center mt-1">
-      <form action="" class="flex flex-col gap-4 justify-center">
-        <label for="fname" class="text-[#EFC897]">Nom:</label>
-        <input class="rounded-md h-12 min-w-[300px] lg:min-w-[800px] pl-2" type="text" id="fname" name="fname" />
-        <label for="lname" class="text-[#EFC897] mt-4">Email:</label>
-        <input class="rounded-md h-12 pl-2" type="text" name="lname"/>
-        <label for="lname" class="text-[#EFC897] mt-4">Sujet:</label>
-        <input class="rounded-md h-12 pl-2" type="text" name="sujet" />
-        <label for="lname" class="text-[#EFC897] mt-4">Message:</label>
-        <textarea class="rounded-md pl-2 pt-2" rows="7"></textarea>
-        <input type="submit" value="SOUMMETRE" class="text-white m-auto rounded my-12" 
-          style="background-color: #598170; padding: 16px 32px; width: 160px; cursor: pointer;"/>
-      </form>
       <div
         class="flex flex-col mt-12 text-white gap-8 items-baseline lg:flex-row"
         style="font-family: nexa-bold"
