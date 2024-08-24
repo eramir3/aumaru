@@ -355,8 +355,12 @@ td.actions {
 
 /* contact */
 
-form.wpcf7-form.init label {
+form.wpcf7-form label {
   color: #efc897;
+}
+
+form.wpcf7-form p {
+  margin-top: 20px;
 }
 
 .wpcf7-form-control {
@@ -373,6 +377,6 @@ form.wpcf7-form.init label {
 .wpcf7-form-control.has-spinner {
   background-color: #598170;
   padding: 16px 32px;
-  width: 160px;
+  max-width: 160px;
   cursor: pointer;
 }
