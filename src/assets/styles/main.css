@@ -343,8 +343,8 @@ td.actions {
 }
 
 .woocommerce-checkout #payment,
-label.p-FieldLabel.Label.Label--empty {
-  color: #515151;
+iframe * {
+  color: #515151 !important;
 }
 
 /* empty cart */
