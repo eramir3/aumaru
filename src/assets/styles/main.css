@@ -364,20 +364,20 @@ form.wpcf7-form p {
   margin-top: 20px;
 }
 
-.wpcf7-form-control {
+.wpcf7-form-control.wpcf7-text,
+.wpcf7-form-control.wpcf7-textarea {
   border-radius: 6px;
   height: 3rem;
   min-width: 300px;
   padding-left: 8px;
 
-  /*
   @media (width > 992px) {
     min-width: 800px;
   }
-    */
 }
 
-.wpcf7-form-control.has-spinner {
+.wpcf7-form-control.wpcf7-submit {
+  border-radius: 6px;
   background-color: #598170;
   padding: 16px 32px;
   max-width: 160px;
