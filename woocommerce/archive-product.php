@@ -25,7 +25,7 @@ get_header( 'shop' );
 	style="font-family: abril-fatface"
 	class="text-center text-white text-5xl font-semibold"
 >
-PRODUITS
+NOS PRODUITS
 </h1>
 <div
 	style="font-family: nexa-light"
@@ -40,7 +40,7 @@ PRODUITS
 	</p>
 	<br/>
 	<p class="text-[#EFC897] font-extrabold">Le command minimum est de 2 produits.</p>
-	<p class="text-[#EFC897] font-extrabold">Le command maximum est de 26 produits.</p>
+	<p class="text-[#EFC897] font-extrabold">Le command maximum est de 25 produits.</p>
 	<p class="mt-6" style="font-family: nexa-light">
 		Pour toute commande, contactez-nous via notre page Instagram, Facebook ou Whatsapp. 
 		Livraison gratuite autour de Lyon et Villeurbanne les mardis et les vendredis. 

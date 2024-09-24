@@ -38,11 +38,11 @@
         </div>
       </div>
       <div
-        class="md:block hidden top-[190px] w-fit lg:-rotate-90 -left-28 lg:text-left lg:absolute md:m-auto md:text-center md:mb-12 md:mt-12 lg:m-0"
+        class="md:block hidden top-[240px] w-fit lg:-rotate-90 -left-10 lg:text-left lg:absolute md:m-auto md:text-center md:mb-12 md:mt-12 lg:m-0"
       >
         <div class="text-[#F9F8EA] font-montserrat text-6xl">AUMARÚ</div>
         <div class="text-[#F9F8EA] text-3xl" style="font-family: nexa-light">
-          LE NECTAR DE LA NATURE
+          PULPE DE FRUIT
         </div>
       </div>
       <div class="w-fit top-[280px] right-12 lg:absolute m-auto mt-12 lg:m-0">
@@ -63,7 +63,7 @@
       class="text-[#F9F8EA] text-center mt-6 lg:pr-10 text-lg"
       style="font-family: nexa-light"
     >
-      PULPE DE FRUIT SANS SOUCRE AJOUTES - 100% NATUREL
+      PULPE DE FRUIT SANS SOUCRE AJOUTÉS - 100% NATUREL
     </div>
   </main>
 <?php wp_footer(); ?>

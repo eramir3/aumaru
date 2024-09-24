@@ -19,7 +19,7 @@
       <a href="https://www.instagram.com/aumaru_officiel/" target="_blank">
         <i class="fa-brands fa-instagram text-[#598170] text-4xl"></i>
       </a>
-      <a href="https://www.facebook.com/people/Aumar%C3%BA-Pulpe-de-Fruit/100088791141039/" target="_blank">
+      <a href="https://www.facebook.com/profile.php?id=100090654551273" target="_blank">
         <i class="fa-brands fa-facebook text-[#598170] text-4xl"></i>
       </a>
       <a href="https://wa.me/33788225586" target="_blank">
