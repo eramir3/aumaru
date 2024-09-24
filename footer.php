@@ -35,14 +35,14 @@ jQuery(document).ready(function($) {
   // Code for adding item to cart
   $('.add_to_cart_button').on('click', function() {
     $(this).addClass('adding_to_cart');
-    $(this).text('Adding to Cart…');
+    $(this).text('Ajouter au panier…');
     $(this).css('pointer-events', 'none');
     $(this).css('filter', 'brightness(0.8)');
   });
 
   $('body').on('added_to_cart', function() {
     const button = document.getElementsByClassName('adding_to_cart')
-    $(button).text('Add to Cart');
+    $(button).text('Ajouter au panier');
     $(button).css('pointer-events', 'auto');
     $(button).css('filter', 'brightness(1)');
     $(button).append('<i class="fa-solid fa-check ml-2"></i>');
