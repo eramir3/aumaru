@@ -10,7 +10,7 @@
       <a href="<?php echo site_url('/conditionnes-generales-de-vente') ?>">Conditionnes Generales De Vente</a>
     </div>
     <div class="flex flex-col items-center mt-12 lg:mt-6 lg:mr-32">
-      <img src="<?php echo get_theme_file_uri('/src/assets/images/green-logo.png'); ?>" />
+      <img class="w-28" src="<?php echo get_theme_file_uri('/src/assets/images/green-logo.png'); ?>" />
       <p class="pt-4">CI RADCO - GRANSAMAN PULPE DE FRUIT</p>
       <p style="font-family: nexa-light">TOUS LES DROITS SONT RESERVÉS</p>
       <p>Copyright &copy; <?php echo date('Y'); ?></p>

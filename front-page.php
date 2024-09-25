@@ -14,24 +14,30 @@
           <div class="carousel-inner">
             <div class="item active">
               <img
-                src="<?php echo get_theme_file_uri('/src/assets/images/goyave-single.png'); ?>"
-                alt="Aumaru-Goyave"
-                class="m-auto w-64"
+                src="<?php echo get_theme_file_uri('/src/assets/images/blackberry-single.png'); ?>"
+                alt="aumaru-blackberry"
+                class="m-auto w-80"
               />
             </div>
             <div class="item">
               <img
-                src="<?php echo get_theme_file_uri('/src/assets/images/goyave-single.png'); ?>"
-                alt="Aumaru-Lulo"
-                class="m-auto w-64"
+                src="<?php echo get_theme_file_uri('/src/assets/images/guava-single.png'); ?>"
+                alt="aumaru-guava"
+                class="m-auto w-80"
               />
             </div>
-
             <div class="item">
               <img
-                src="<?php echo get_theme_file_uri('/src/assets/images/goyave-single.png'); ?>"
-                alt="Aumaru-Maracuya"
-                class="m-auto w-64"
+                src="<?php echo get_theme_file_uri('/src/assets/images/soursop-single.png'); ?>"
+                alt="aumaru-soursop"
+                class="m-auto w-80"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="<?php echo get_theme_file_uri('/src/assets/images/lulo-single.png'); ?>"
+                alt="aumaru-lulo"
+                class="m-auto w-80"
               />
             </div>
           </div>
