@@ -69,7 +69,7 @@
       class="text-[#F9F8EA] text-center mt-6 lg:pr-10 text-lg"
       style="font-family: nexa-light"
     >
-      PULPE DE FRUIT SANS SOUCRE AJOUTÉS - 100% NATUREL
+      PULPE DE FRUIT SANS SOUCRE AJOUTÉ - 100% NATUREL
     </div>
   </main>
 <?php wp_footer(); ?>
