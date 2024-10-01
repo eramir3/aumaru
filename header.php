@@ -63,7 +63,7 @@
             href="<?php echo site_url('/about-us') ?>"
             class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
           >
-            <span>QUI-SOMMES NOUS</span>
+            <span>QUI SOMMES-NOUS</span>
           </a>
         </li>
         <li>

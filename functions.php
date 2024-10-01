@@ -50,9 +50,11 @@ function cart_counter_add_to_cart_fragment( $fragments ) {
 
 // update cart in cart section
 function enqueue_wc_cart_fragments_script() {
-  if(function_exists('is_cart') && is_cart()) {
-    wp_enqueue_script('wc-cart-fragments');
-  }
+  // Comenting condition to make it apply to all website sections
+  // if(function_exists('is_cart') && is_cart()) {
+  //   wp_enqueue_script('wc-cart-fragments');
+  // }
+  wp_enqueue_script('wc-cart-fragments');
 }
 add_action('wp_enqueue_scripts', 'enqueue_wc_cart_fragments_script');
 
