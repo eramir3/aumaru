@@ -64,3 +64,5 @@ function new_woocommerce_page_title( $page_title ) {
   if( $page_title == 'PRODUITS' ) return "";
   return $page_title;
 }
+
+add_action('wp_footer', 'enqueue_wc_cart_fragments_script');
