@@ -39,8 +39,8 @@ NOS PRODUITS
         naturel et sain. Cliquez sur les images pour en savoir plus sur nos produits.
 	</p>
 	<br/>
-	<p class="text-[#EFC897] font-extrabold">Le command minimum est de 2 produits.</p>
-	<p class="text-[#EFC897] font-extrabold">Le command maximum est de 25 produits.</p>
+	<p class="text-[#EFC897] font-extrabold">La command minimum est de 2 produits.</p>
+	<p class="text-[#EFC897] font-extrabold">La command maximum est de 25 produits.</p>
 	<p class="mt-6" style="font-family: nexa-light">
 		Pour toute commande, contactez-nous via notre page Instagram, Facebook ou Whatsapp. 
 		Livraison gratuite autour de Lyon et Villeurbanne les mardis et les vendredis. 
