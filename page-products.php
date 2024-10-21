@@ -158,8 +158,8 @@
         style="font-family: nexa"
         class="mx-4 lg:ml-12 lg:col-span-2 bg-[#131313]/50 p-6"
       >
-        <p class="text-[#EFC897]">Le command minimum est de 2 produits</p>
-        <p class="text-[#EFC897]">Le command maximum est de 26 produits</p>
+        <p class="text-[#EFC897]">La command minimum est de 2 produits</p>
+        <p class="text-[#EFC897]">La command maximum est de 26 produits</p>
         <p class="mt-6" style="font-family: nexa-light">
           Pour toute commande, contactez-nous via notre page Instagram, Facebook ou Whatsapp. 
           Livraison gratuite autour de Lyon et Villeurbanne les mardis et les vendredis. 
