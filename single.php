@@ -4,8 +4,18 @@
     <?php 
       while(have_posts()) {
         the_post(); ?>
-        <div>
-          <!-- <h2 class="text-white m-auto mb-12"><?php the_title(); ?></h2> -->
+        <div class="max-w-4xl m-auto">
+          <!-- Display featured image -->
+          <?php if ( has_post_thumbnail() ) : ?>
+            <div class="mb-6">
+              <?php the_post_thumbnail('large', ['class' => 'w-full h-auto rounded-lg']); ?>
+            </div>
+          <?php endif; ?>
+
+          <h1 class="text-white text-center text-5xl font-semibold mb-6">
+            <?php the_title(); ?>
+          </h1>
+
           <div class="text-white">
             <?php the_content(); ?>
           </div>
