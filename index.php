@@ -26,7 +26,7 @@
             </h2>
             <div class="text-white">
               <?php the_excerpt(); ?>
-              <a href="<?php the_permalink(); ?>">Lire la suite »</a>
+              <a href="<?php the_permalink(); ?>" class="text-[#efc897]">Lire la suite »</a>
             </div>
           </div>
       <?php }
