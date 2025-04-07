@@ -24,10 +24,10 @@
             <h2 class="text-white text-3xl pt-4 pb-2">
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
-            <div class="text-white">
+            <div class="text-white  mb-2">
               <?php the_excerpt(); ?>
-              <a href="<?php the_permalink(); ?>" class="text-[#efc897]">Lire la suite »</a>
             </div>
+            <a href="<?php the_permalink(); ?>" class="text-[#efc897]">Lire la suite »</a>
           </div>
       <?php }
       ?>
@@ -39,7 +39,7 @@
           $categories = get_categories();
           foreach($categories as $category) {
             if($category->name !== 'Uncategorized') {
-              echo '<div class="pb-2"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>';
+              echo '<div class="pb-2 text-[#efc897]"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>';
             }
           }
         ?>
