@@ -1,13 +1,13 @@
 <?php get_header(); ?>
-<div class="flex flex-col h-screen">
-  <main class="max-w-screen-xxl m-auto py-16 flex-grow">
-    <h1
-      style="font-family: abril-fatface"
-      class="text-center text-white text-5xl font-semibold mb-12"
-    >
-      CONNAÎTRE PLUS
-    </h1>
-    <div>
+<div class="flex flex-col h-screen pt-16 m-auto">
+  <h1
+    style="font-family: abril-fatface"
+    class="text-center text-white text-5xl font-semibold mb-12"
+  >
+    CONNAÎTRE PLUS
+  </h1>
+  <main class="py-16 flex flex-grow justify-center">
+    <div class="max-w-screen-xxl">
       <?php 
         while(have_posts()) { 
           the_post(); ?>
@@ -32,6 +32,19 @@
       <?php }
       ?>
     </div>
+    <aside class="text-white">
+      <div class="pl-2 ml-10">
+        <h2 class="text-white text-3xl pb-2">Catégories</h2>
+        <?php
+          $categories = get_categories();
+          foreach($categories as $category) {
+            if($category->name !== 'Uncategorized') {
+              echo '<div class="pb-2"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>';
+            }
+          }
+        ?>
+      </div>
+    </aside>
   </main>
 <?php get_footer(); ?>
 </div>
