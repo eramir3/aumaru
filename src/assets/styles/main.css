@@ -317,6 +317,10 @@ td.actions {
   border-bottom: transparent;
 }
 
+.shipping-calculator-button {
+  color: #efc897;
+}
+
 /* checkout */
 
 .woocommerce-checkout {
