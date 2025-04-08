@@ -24,6 +24,21 @@
             <h2 class="text-white text-3xl pt-4 pb-2">
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
+
+            <!-- Post Categories -->
+            <div class="text-white text-sm mb-2">
+              <?php
+                $post_categories = get_the_category();
+                if ( ! empty( $post_categories ) ) {
+                  foreach ( $post_categories as $cat ) {
+                    echo '<a href="' . esc_url( get_category_link( $cat->term_id ) ) . '" class="mr-2 text-[#efc897] hover:underline">';
+                    echo esc_html( $cat->name );
+                    echo '</a>';
+                  }
+                }
+              ?>
+            </div>
+
             <div class="text-white  mb-2">
               <?php the_excerpt(); ?>
             </div>
