@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="flex flex-col h-screen">
-  <main class="max-w-screen-xxl m-auto py-16 flex-grow">
+  <div class="max-w-screen-xxl m-auto py-16 flex-grow">
     <h1
       style="font-family: abril-fatface"
       class="text-center text-white text-5xl font-semibold"
@@ -12,7 +12,7 @@
         <img src="<?php echo get_theme_file_uri('/src/assets/images/gold-logo.png'); ?>" class="m-auto" width="300"/>
         <img src="<?php echo get_theme_file_uri('/src/assets/images/pulpes.png'); ?>" class="mt-24" width="700"/>
       </aside>
-      <aside
+      <main
         style="font-family: nexa-light"
         class="text-white p-6 mx-2 mt-12 bg-[#131313]/50 shrink-[8]"
       >
@@ -76,9 +76,9 @@
               les glaciers de Lyon, Marseille et Paris et ailleurs.
             </div>
         </div>
-      </aside>
+      </main>
     </div>
-  </main>
+  </div>
 <?php get_footer(); ?>
 </div>
 

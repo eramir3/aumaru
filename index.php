@@ -6,8 +6,8 @@
   >
     CONNAÎTRE PLUS
   </h1>
-  <main class="py-16 flex flex-grow justify-center">
-    <div class="max-w-screen-xxl">
+  <div class="flex flex-col-reverse flex-grow justify-center lg:flex-row lg:py-16">
+    <main class="max-w-screen-xxl">
       <?php 
         while(have_posts()) { 
           the_post(); ?>
@@ -31,7 +31,7 @@
                 $post_categories = get_the_category();
                 if ( ! empty( $post_categories ) ) {
                   foreach ( $post_categories as $cat ) {
-                    echo '<a href="' . esc_url( get_category_link( $cat->term_id ) ) . '" class="mr-2 text-[#efc897] hover:underline">';
+                    echo 'Catégories: <a href="' . esc_url( get_category_link( $cat->term_id ) ) . '" class="mr-2 text-[#efc897] hover:underline">';
                     echo esc_html( $cat->name );
                     echo '</a>';
                   }
@@ -46,9 +46,9 @@
           </div>
       <?php }
       ?>
-    </div>
-    <aside class="text-white">
-      <div class="pl-2 ml-10">
+    </main>
+    <aside class="mb-10">
+      <div class="lg:pl-2 lg:ml-10">
         <h2 class="text-white text-3xl pb-2">Catégories</h2>
         <?php
           $categories = get_categories();
@@ -60,6 +60,6 @@
         ?>
       </div>
     </aside>
-  </main>
+  </div>
 <?php get_footer(); ?>
 </div>

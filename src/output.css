@@ -800,10 +800,6 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.ml-10{
-  margin-left: 2.5rem;
-}
-
 .ml-12{
   margin-left: 3rem;
 }
@@ -834,6 +830,10 @@ video {
 
 .mt-6{
   margin-top: 1.5rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .box-border{
@@ -2241,10 +2241,6 @@ video {
   padding-left: 3rem;
 }
 
-.pl-2{
-  padding-left: 0.5rem;
-}
-
 .pt-1{
   padding-top: 0.25rem;
 }
@@ -2956,6 +2952,10 @@ video {
     margin-bottom: 3rem;
   }
 
+  .md\:ml-10{
+    margin-left: 2.5rem;
+  }
+
   .md\:mt-12{
     margin-top: 3rem;
   }
@@ -2966,6 +2966,10 @@ video {
 
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:pl-2{
+    padding-left: 0.5rem;
   }
 
   .md\:text-center{
@@ -3009,6 +3013,18 @@ video {
 
   .lg\:mt-6{
     margin-top: 1.5rem;
+  }
+
+  .lg\:ml-10{
+    margin-left: 2.5rem;
+  }
+
+  .lg\:mb-4{
+    margin-bottom: 1rem;
+  }
+
+  .lg\:mb-10{
+    margin-bottom: 2.5rem;
   }
 
   .lg\:block{
@@ -3090,8 +3106,17 @@ video {
     padding-right: 0.75rem;
   }
 
+  .lg\:py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .lg\:pr-10{
     padding-right: 2.5rem;
+  }
+
+  .lg\:pl-2{
+    padding-left: 0.5rem;
   }
 
   .lg\:text-left{

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="flex flex-col h-screen">
-  <main class="max-w-screen-xxl m-auto py-16 flex-grow">
+  <div class="max-w-screen-xxl m-auto py-16 flex-grow">
     <h1
       style="font-family: abril-fatface"
       class="text-center text-white text-5xl font-semibold"
@@ -18,7 +18,7 @@
       </h2>
       <p class="pt-8 max-w-96" style="font-family: nexa-light"><?php the_content(); ?></p>
     </div>
-    <div class="flex flex-col items-center mt-1">
+    <main class="flex flex-col items-center mt-1">
       <div
         class="flex flex-col mt-12 text-white gap-8 items-baseline lg:flex-row"
         style="font-family: nexa-bold"
@@ -32,13 +32,13 @@
           <span class="pt-1">+57 310 212 1976</span>
         </div>
       </div>
-    </div>
+    </main>
     <div
       style="font-family: nexa-bold"
       class="text-center text-white mt-12"
     >
       aumaru@gransaman.com
     </div>
-  </main>
+  </div>
 <?php get_footer(); ?>
 </div>
