@@ -28,20 +28,20 @@ get_header( 'shop' );
 NOS PRODUITS
 </h1>
 <div
-	style="font-family: nexa-light"
+	style="font-family: nexa"
 	class="text-white p-6 mx-2 mt-12 bg-[#131313]/50"
 >
 	<h2 class="text-[#EFC897] font-extrabold text-3xl">PULPE DE FRUIT</h2>
-	<p class="pt-8">
+	<p class="pt-8 text-xl" style="font-family: nexa-light">
 		La pulpe de fruit congelée est un produit non fermenté, ni concentré ni dilué, obtenu à 
-        partir de la partie interne et comestible qui recouvre, dans la plupart des cas, les graines des fruits. 
-        Nos fruits sont choisis avec les plus hauts standards de qualité pour garantir un produit 100% frais, 
-        naturel et sain. Cliquez sur les images pour en savoir plus sur nos produits.
+    partir de la partie interne et comestible qui recouvre, dans la plupart des cas, les graines des fruits. 
+    Nos fruits sont choisis avec les plus hauts standards de qualité pour garantir un produit 100% frais, 
+  	naturel et sain. Cliquez sur les images pour en savoir plus sur nos produits.
 	</p>
 	<br/>
 	<p class="text-[#EFC897] font-extrabold">La commande minimum est de 2 produits.</p>
 	<p class="text-[#EFC897] font-extrabold">La commande maximum est de 25 produits.</p>
-	<p class="mt-6" style="font-family: nexa-light">
+	<p class="mt-6 text-xl" style="font-family: nexa-light">
 		Pour toute commande, contactez-nous via notre page Instagram, Facebook ou Whatsapp. 
 		Livraison gratuite autour de Lyon et Villeurbanne les mardis et les vendredis. 
 		Pour toute commande vers d’autres villes en France, veuillez nous contacter via notre 
