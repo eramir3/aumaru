@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
-<body class="h-full bg-no-repeat bg-cover bg-fixed
+<body class="h-full bg-no-repeat bg-cover
   <?php 
     if(is_shop() || $pagename == 'learn-more') echo "bg-[url('./assets/images/produits-bg.webp')]";
     else if($pagename == 'contact') echo "bg-[url('./assets/images/contact-bg.webp')]";
