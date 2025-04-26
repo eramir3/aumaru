@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
-<body class="h-full bg-no-repeat lg:bg-cover max-sm:bg-fixed
+<body class="h-full bg-no-repeat bg-cover max-sm:bg-fixed
   <?php 
-    if(is_shop() || $pagename == 'learn-more') echo "bg-[url('./assets/images/produits-bg.webp')]";
+    if(is_shop() || $pagename == 'learn-more' || is_single()) echo "bg-[url('./assets/images/produits-bg.webp')]";
     else if($pagename == 'contact') echo "bg-[url('./assets/images/contact-bg.webp')]";
     else if(!$pagename) echo "bg-[url('./assets/images/landing-bg.png')]";
     else if($pagename == 'mentions-legales') echo "";
