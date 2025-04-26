@@ -9,11 +9,14 @@ module.exports = {
         "abril-fatface": ["Abril+Fatface"],
       },
       screens: {
+        // min values
         sm: "576px",
         md: "768px",
         lg: "992px",
         xl: "1200px",
         xxl: "1400px",
+        // max values
+        "max-sm": { max: "576px" },
       },
     },
   },
