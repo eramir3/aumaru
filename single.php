@@ -16,7 +16,7 @@
             <?php the_title(); ?>
           </h1>
 
-          <div class="text-white">
+          <div class="text-white text-xl">
             <?php the_content(); ?>
           </div>
         </div>

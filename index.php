@@ -39,7 +39,7 @@
               ?>
             </div>
 
-            <div class="text-white text-2xl mb-2">
+            <div class="text-white text-xl mb-2">
               <?php the_excerpt(); ?>
             </div>
             <a href="<?php the_permalink(); ?>" class="text-[#efc897] hover:underline">Lire la suite »</a>
