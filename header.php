@@ -12,7 +12,8 @@
     else if(!$pagename) echo "bg-[url('./assets/images/landing-bg.png')]";
     else if($pagename == 'mentions-legales') echo "";
     else if($pagename == 'conditionnes-generales-de-vente') echo "";
-    else echo "bg-[url('./assets/images/about-us-bg.png')]";
+    else if($pagename == 'about-us') echo "bg-[url('./assets/images/about-us-bg.png')]";
+    else echo "bg-[url('./assets/images/produits-bg.webp')]";
   ?>">
   <header
     class="flex flex-col lg:flex-row xl:justify-between justify-center items-center bg-[#F9F6F2]"
