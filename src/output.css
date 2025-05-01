@@ -3139,6 +3139,12 @@ video {
   }
 }
 
+@media (max-width: 576px){
+  .max-sm\:bg-fixed{
+    background-attachment: fixed;
+  }
+}
+
 @media (max-width: 992px){
   .max-lg\:w-72{
     width: 18rem;

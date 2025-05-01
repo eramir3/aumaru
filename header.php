@@ -7,7 +7,7 @@
 </head>
 <body class="h-full bg-no-repeat bg-cover
   <?php 
-    if(is_shop() || $pagename == 'learn-more' || is_single()) echo "bg-[url('./assets/images/produits-bg.webp')]";
+    if(is_shop() || $pagename == 'learn-more' || is_single()) echo "bg-[url('./assets/images/produits-bg.webp')] max-sm:bg-fixed";
     else if($pagename == 'contact') echo "bg-[url('./assets/images/contact-bg.webp')] bg-fixed";
     else if(!$pagename) echo "bg-[url('./assets/images/landing-bg.png')] bg-fixed";
     else if($pagename == 'mentions-legales') echo "";
