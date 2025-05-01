@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
-<body class="h-full bg-no-repeat bg-cover max-sm:bg-fixed
+<body class="h-full bg-no-repeat bg-cover
   <?php 
     if(is_shop() || $pagename == 'learn-more' || is_single()) echo "bg-[url('./assets/images/produits-bg.webp')]";
-    else if($pagename == 'contact') echo "bg-[url('./assets/images/contact-bg.webp')]";
-    else if(!$pagename) echo "bg-[url('./assets/images/landing-bg.png')]";
+    else if($pagename == 'contact') echo "bg-[url('./assets/images/contact-bg.webp')] bg-fixed";
+    else if(!$pagename) echo "bg-[url('./assets/images/landing-bg.png')] bg-fixed";
     else if($pagename == 'mentions-legales') echo "";
     else if($pagename == 'conditionnes-generales-de-vente') echo "";
-    else if($pagename == 'about-us') echo "bg-[url('./assets/images/about-us-bg.png')]";
+    else if($pagename == 'about-us') echo "bg-[url('./assets/images/about-us-bg.png')] bg-fixed";
     else echo "bg-[url('./assets/images/produits-bg.webp')]";
   ?>">
   <header
