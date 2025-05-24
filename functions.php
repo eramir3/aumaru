@@ -70,7 +70,8 @@ function new_woocommerce_page_title( $page_title ) {
 add_action('wp_footer', 'enqueue_wc_cart_fragments_script');
 
 // Remove single product zoom
-function remove_image_zoom_support() {
-    remove_theme_support( 'wc-product-gallery-zoom' );
+function custom_single_product_image_html( $html, $post_id ) {
+    $post_thumbnail_id = get_post_thumbnail_id( $post_id );
+    return get_the_post_thumbnail( $post_thumbnail_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
 }
-add_action( 'wp', 'remove_image_zoom_support', 100 );
+add_filter('woocommerce_single_product_image_thumbnail_html', 'custom_single_product_image_html', 10, 2);
