@@ -1008,8 +1008,20 @@ video {
   max-width: 24rem;
 }
 
+.max-w-lg{
+  max-width: 32rem;
+}
+
 .max-w-screen-xxl{
   max-width: 2000px;
+}
+
+.max-w-2xl{
+  max-width: 42rem;
+}
+
+.max-w-3xl{
+  max-width: 48rem;
 }
 
 .flex-shrink{
@@ -2229,6 +2241,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.px-24{
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -3094,6 +3111,16 @@ video {
     padding-bottom: 4rem;
   }
 
+  .lg\:px-24{
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .lg\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .lg\:pl-2{
     padding-left: 0.5rem;
   }
@@ -3119,23 +3146,11 @@ video {
   .xl\:justify-between{
     justify-content: space-between;
   }
-
-  .xl\:pt-96{
-    padding-top: 24rem;
-  }
 }
 
 @media (min-width: 2000px){
-  .xxl\:pt-40{
-    padding-top: 10rem;
-  }
-
   .xxl\:pt-32{
     padding-top: 8rem;
-  }
-
-  .xxl\:pt-96{
-    padding-top: 24rem;
   }
 }
 

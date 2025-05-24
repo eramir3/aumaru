@@ -68,3 +68,9 @@ function new_woocommerce_page_title( $page_title ) {
 }
 
 add_action('wp_footer', 'enqueue_wc_cart_fragments_script');
+
+// Remove single product zoom
+function remove_image_zoom_support() {
+    remove_theme_support( 'wc-product-gallery-zoom' );
+}
+add_action( 'wp', 'remove_image_zoom_support', 100 );

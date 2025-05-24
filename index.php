@@ -6,6 +6,17 @@
   >
     CONNAÎTRE PLUS
   </h1>
+  <div class="flex justify-center">
+    <div
+      style="font-family: nexa; bg-[#131313]/50"
+      class="text-white p-6 mx-2 mt-12 max-w-3xl"
+    >
+      <p class="text-xl" style="font-family: nexa-light">
+        Si tu es intéressé(e) par notre entreprise, tu trouveras ici différents articles parus dans les médias,
+        ainsi que des recettes et des nouvelles concernant nos produits.
+      </p>
+    </div>
+  </div>
   <div class="flex flex-col-reverse flex-grow justify-center lg:flex-row lg:py-16">
     <main class="max-w-screen-xxl">
       <?php 

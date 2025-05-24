@@ -3,7 +3,7 @@
   class="bg-no-repeat bg-cover bg-[url('./assets/images/footer.png')] bg-[#F9F6F2] pt-2 pb-10"
 >
   <div
-    class="max-w-screen-xxl m-auto mt-12 lg:flex lg:justify-between lg:items-center lg:mt-2"
+    class="max-w-screen-xxl m-auto mt-12 lg:flex lg:justify-between lg:items-center lg:mt-2 lg:px-20"
   >
     <div class="flex flex-col items-center font-extrabold lg:items-start">
       <a href="<?php echo site_url('/mentions-legales') ?>">Mentions Légales</a>
