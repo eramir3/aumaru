@@ -29,7 +29,7 @@ NOS PRODUITS
 </h1>
 <div
 	style="font-family: nexa"
-	class="text-white p-6 mx-2 mt-12 bg-[#131313]/50"
+	class="text-white p-6 mx-20 mt-12 bg-[#131313]/50"
 >
 	<h2 class="text-[#EFC897] font-extrabold text-3xl">PULPE DE FRUIT</h2>
 	<p class="pt-8 text-xl" style="font-family: nexa-light">
