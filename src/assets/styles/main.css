@@ -45,6 +45,14 @@ ul.products {
   }
 }
 
+section > ul.products {
+  column-gap: 80px;
+
+  @media (width > 992px) {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
 ul.products > li {
   display: flex;
   flex-direction: column;
