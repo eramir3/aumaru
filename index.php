@@ -4,7 +4,7 @@
     style="font-family: abril-fatface"
     class="text-center text-white text-5xl font-semibold mb-12"
   >
-    CONNAÎTRE PLUS
+    NOUVELLES
   </h1>
   <div class="flex justify-center">
     <div
@@ -40,7 +40,7 @@
             <div class="text-white text-xl mb-2">
               <?php
                 $post_categories = get_the_category();
-                if ( ! empty( $post_categories ) ) {
+                if (!empty( $post_categories )) {
                   foreach ( $post_categories as $cat ) {
                     echo 'Catégories: <a href="' . esc_url( get_category_link( $cat->term_id ) ) . '" class="mr-2 text-[#efc897] hover:underline">';
                     echo esc_html( $cat->name );

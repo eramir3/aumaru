@@ -765,11 +765,6 @@ video {
   margin-right: 0.5rem;
 }
 
-.mx-20{
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
-
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
@@ -1013,8 +1008,16 @@ video {
   max-width: 16rem;
 }
 
+.max-w-80{
+  max-width: 20rem;
+}
+
 .max-w-96{
   max-width: 24rem;
+}
+
+.max-w-\[600px\]{
+  max-width: 600px;
 }
 
 .max-w-screen-xxl{
@@ -2266,6 +2269,10 @@ video {
   padding-top: 0.5rem;
 }
 
+.pt-20{
+  padding-top: 5rem;
+}
+
 .pt-4{
   padding-top: 1rem;
 }
@@ -2990,14 +2997,14 @@ video {
     margin: 0px;
   }
 
-  .lg\:my-2{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
   .lg\:mx-20{
     margin-left: 5rem;
     margin-right: 5rem;
+  }
+
+  .lg\:my-2{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .lg\:ml-10{

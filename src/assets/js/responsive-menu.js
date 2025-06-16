@@ -134,7 +134,6 @@
   }
 
   function closeMenu(menu) {
-    // console.log("closing", menu);
     menu.classList.remove("open");
     menu.removeAttribute("open");
     menu.setAttribute("aria-expanded", "false");

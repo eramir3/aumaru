@@ -7,7 +7,8 @@
 </head>
 <body class="h-full bg-no-repeat bg-cover
   <?php 
-    if(is_shop() || $pagename == 'learn-more' || is_single()) echo "bg-[url('./assets/images/produits-bg.webp')] max-sm:bg-fixed";
+    if(is_shop() || $pagename == 'learn-more' || get_post_type() == 'event' || is_single()) 
+      echo "bg-[url('./assets/images/produits-bg.webp')] max-sm:bg-fixed";
     else if($pagename == 'contact') echo "bg-[url('./assets/images/contact-bg.webp')] bg-fixed";
     else if(!$pagename) echo "bg-[url('./assets/images/landing-bg.png')] bg-fixed";
     else if($pagename == 'mentions-legales') echo "";
@@ -84,12 +85,24 @@
           />
         </a>
         <li>
-          <a
-            href="<?php echo site_url('/learn-more') ?>"
-            class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
-          >
-            <span>CONNAÎTRE PLUS</span>
-          </a>
+          <div class="dropdown flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway">
+            <span class="dropbtn">CONNAÎTRE PLUS</span>
+            <span class="dashicons dashicons-arrow-down"></span>
+            <div class="dropdown-content">
+              <a
+                href="<?php echo site_url('/learn-more') ?>"
+                class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
+              >
+                <span>NOUVELLES</span>
+              </a>
+              <a
+                href="<?php echo site_url('/events') ?>"
+                class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
+              >
+                <span>ÉVÉNEMENTS</span>
+              </a>
+            </div>
+          </div>
         </li>
         <li>
           <a

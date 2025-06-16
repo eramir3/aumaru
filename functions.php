@@ -28,7 +28,8 @@ function aumaru_features() {
     )
   ));
 
-  add_theme_support( 'wc-product-gallery-zoom' );
+  // Commented to remove zoom
+  // add_theme_support( 'wc-product-gallery-zoom' );
   add_theme_support( 'wc-product-gallery-lightbox' );
   add_theme_support( 'wc-product-gallery-slider' );
 
@@ -62,13 +63,57 @@ add_action('wp_enqueue_scripts', 'enqueue_wc_cart_fragments_script');
 add_filter( 'woocommerce_page_title', 'new_woocommerce_page_title');
   
 function new_woocommerce_page_title( $page_title ) {
-  
   if( $page_title == 'PRODUITS' ) return "";
   return $page_title;
 }
 
 add_action('wp_footer', 'enqueue_wc_cart_fragments_script');
 
-// Remove single product zoom
-add_filter( 'woocommerce_single_product_zoom_enabled', '__return_false' );
+// Events Post Type
+function event_post_types() {
+  register_post_type('event', array(
+    'rewrite' => array('slug' => 'events'),
+    'show_in_rest' => true,
+    'has_archive' => true,
+    'supports' => array('title', 'editor', 'excerpt'),
+    'public' => true,
+    'labels' => array(
+      'name' => 'Events',
+      'add_new_item' => 'Add New Event',
+      'edit_item' => 'Edit Event',
+      'all_items' => 'All Events',
+      'singular_name' => 'Event'
+    ),
+    'menu_icon' => 'dashicons-calendar'
+  ));
+}
+add_post_type_support( 'event', 'thumbnail' );
+add_action('init', 'event_post_types');
 
+function event_adjust_queries($query) {
+  if(!is_admin() && is_post_type_archive('event') && $query->is_main_query()) {
+    $today = date('Ymd');
+    $query->set('meta_key', 'event_date');
+    $query->set('orderby', 'meta_value_num');
+    $query->set('order', 'ASC');
+    $query->set('meta_query', array(
+      array(
+        'key' => 'event_date',
+        'compare' => '>=',
+        'value' => $today,
+        'type' => 'numeric',
+      )
+    ));
+  }
+}
+
+add_action('pre_get_posts', 'event_adjust_queries');
+
+
+// Load icons
+function load_dashicons_for_guests() {
+    if (!is_admin()) {
+        wp_enqueue_style('dashicons');
+    }
+}
+add_action('wp_enqueue_scripts', 'load_dashicons_for_guests');
