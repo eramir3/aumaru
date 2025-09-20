@@ -16,7 +16,7 @@
           Avez-vous un événement pour 50, 100, 200, 300 ou encore plus de personnes? <br /> <br />
           Souhaitez-vous proposer une alternative de boissons différent pour votre événement? <br /> <br />
           Avec nos machines de jus et de granité nous pouvons vous aider à apporter un touche
-          éxotique et diGérent à votre événement! <br /> <br />
+          éxotique et différent à votre événement! <br /> <br />
           N’hésitez pas à nous contacter pour réaliser un devis sur mesure!
         </p>
       </div>
