@@ -462,7 +462,7 @@ form.wpcf7-form p:last-child {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 180px;
   z-index: 1;
 }
 

@@ -1024,6 +1024,10 @@ video {
   max-width: 2000px;
 }
 
+.max-w-screen-xl{
+  max-width: 1200px;
+}
+
 .flex-shrink{
   flex-shrink: 1;
 }
@@ -1903,6 +1907,10 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-xl{
+  border-radius: 0.75rem;
+}
+
 .rounded-b{
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -2241,6 +2249,16 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -2279,6 +2297,10 @@ video {
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pt-12{
+  padding-top: 3rem;
 }
 
 .text-left{

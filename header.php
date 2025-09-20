@@ -7,7 +7,7 @@
 </head>
 <body class="h-full bg-no-repeat bg-cover
   <?php 
-    if(is_shop() || $pagename == 'learn-more' || get_post_type() == 'event' || is_single()) 
+    if(is_shop() || $pagename == 'learn-more' || $pagename == 'services' || get_post_type() == 'event' || is_single()) 
       echo "bg-[url('./assets/images/produits-bg.webp')] max-sm:bg-fixed";
     else if($pagename == 'contact') echo "bg-[url('./assets/images/contact-bg.webp')] bg-fixed";
     else if(!$pagename) echo "bg-[url('./assets/images/landing-bg.png')] bg-fixed";
@@ -100,6 +100,12 @@
                 class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
               >
                 <span>ÉVÉNEMENTS</span>
+              </a>
+              <a
+                href="<?php echo site_url('/services') ?>"
+                class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
+              >
+                <span>SERVICE TRAITEUR</span>
               </a>
             </div>
           </div>
