@@ -34,7 +34,7 @@ services:
       WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-aumaru}
       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wordpress}
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
-      WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX:-wp_}
+      WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX:-wptj_}
       WORDPRESS_CONFIG_EXTRA: |
         define('WP_HOME', 'http://localhost:${WORDPRESS_PORT:-8080}');
         define('WP_SITEURL', 'http://localhost:${WORDPRESS_PORT:-8080}');
@@ -59,6 +59,11 @@ services:
         }
     volumes:
       - wordpress_data:/var/www/html
+      - ./docker/wordpress.htaccess:/var/www/html/.htaccess:ro
+      - ./docker/apache-wordpress.conf:/etc/apache2/conf-enabled/wordpress-local.conf:ro
+      # Use the local wp-content snapshot for plugins, uploads, and languages.
+      - ./wp-content:/var/www/html/wp-content
+      # Keep the repo root as the live theme source during development.
       - ./:/var/www/html/wp-content/themes/aumaru
 
   wp-cli:
@@ -75,6 +80,7 @@ services:
       WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-aumaru}
       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wordpress}
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
+      WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX:-wptj_}
       WP_URL: http://localhost:${WORDPRESS_PORT:-8080}
       WP_TITLE: ${WORDPRESS_SITE_TITLE:-Aumaru Local}
       WP_ADMIN_USER: ${WORDPRESS_ADMIN_USER:-admin}
@@ -82,6 +88,9 @@ services:
       WP_ADMIN_EMAIL: ${WORDPRESS_ADMIN_EMAIL:-admin@example.com}
     volumes:
       - wordpress_data:/var/www/html
+      # Match the wordpress service mounts so CLI commands operate on the same content tree.
+      - ./wp-content:/var/www/html/wp-content
+      # Keep the repo root as the live theme source during development.
       - ./:/var/www/html/wp-content/themes/aumaru
     entrypoint: ["/bin/sh", "-c"]
     command:
@@ -107,6 +116,38 @@ services:
         else
           wp plugin activate woocommerce --allow-root --path=/var/www/html
         fi
+        ensure_page() {
+          slug="$$1"
+          title="$$2"
+          page_id="$$(wp post list \
+            --allow-root \
+            --path=/var/www/html \
+            --post_type=page \
+            --post_status=publish,draft,pending,private \
+            --name="$$slug" \
+            --format=ids | cut -d ' ' -f1)"
+          if [ -z "$$page_id" ]; then
+            wp post create \
+              --allow-root \
+              --path=/var/www/html \
+              --post_type=page \
+              --post_status=publish \
+              --post_title="$$title" \
+              --post_name="$$slug" >/dev/null
+          fi
+        }
+        permalink_structure="$$(wp option get permalink_structure --allow-root --path=/var/www/html 2>/dev/null || true)"
+        if [ -z "$$permalink_structure" ]; then
+          wp rewrite structure '/%postname%/' --allow-root --path=/var/www/html
+        fi
+        ensure_page about-us "About Us"
+        ensure_page contact "Contact"
+        ensure_page services "Services"
+        ensure_page products "Products"
+        ensure_page learn-more "Learn More"
+        ensure_page mentions-legales "Mentions Legales"
+        ensure_page conditionnes-generales-de-vente "Conditions Generales De Vente"
+        wp rewrite flush --allow-root --path=/var/www/html
 
 volumes:
   db_data:
