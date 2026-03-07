@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
+<?php
+  global $pagename;
+  $is_shop_page = function_exists('is_shop') && is_shop();
+  $cart_count = function_exists('WC') && WC()->cart ? WC()->cart->get_cart_contents_count() : 0;
+?>
 <body class="h-full bg-no-repeat bg-cover
   <?php 
-    if(is_shop() || $pagename == 'learn-more' || $pagename == 'services' || get_post_type() == 'event' || is_single()) 
+    if($is_shop_page || $pagename == 'learn-more' || $pagename == 'services' || get_post_type() == 'event' || is_single()) 
       echo "bg-[url('./assets/images/produits-bg.webp')] max-sm:bg-fixed";
     else if($pagename == 'contact') echo "bg-[url('./assets/images/contact-bg.webp')] bg-fixed";
     else if(!$pagename) echo "bg-[url('./assets/images/landing-bg.png')] bg-fixed";
@@ -123,7 +128,7 @@
             <span class="lg:hidden text-gray-600 hover:text-gray-900 font-raleway">CART</span>
             <div class="lg:flex items-center text-[#598170] hidden">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#598170" viewBox="0 0 256 256"><path d="M239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM88,200a16,16,0,1,0,16,16A16,16,0,0,0,88,200Zm104,0a16,16,0,1,0,16,16A16,16,0,0,0,192,200Z"></path></svg>
-              <span  id="mini-cart-count" class="cart-counter mt-2"><?php echo WC()->cart->get_cart_contents_count() ?></span>
+              <span id="mini-cart-count" class="cart-counter mt-2"><?php echo esc_html($cart_count); ?></span>
             </div>
           </a>
         </li>

@@ -1,0 +1,113 @@
+name: aumaru
+
+services:
+  db:
+    image: mariadb:11.4
+    restart: unless-stopped
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_DATABASE: ${WORDPRESS_DB_NAME:-aumaru}
+      MYSQL_USER: ${WORDPRESS_DB_USER:-wordpress}
+      MYSQL_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:php8.2-apache
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - ${WORDPRESS_PORT:-8080}:80
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-aumaru}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
+      WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX:-wp_}
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_HOME', 'http://localhost:${WORDPRESS_PORT:-8080}');
+        define('WP_SITEURL', 'http://localhost:${WORDPRESS_PORT:-8080}');
+        define('WP_ENVIRONMENT_TYPE', 'local');
+        if (!defined('WP_DEBUG')) {
+          define('WP_DEBUG', true);
+        }
+        if (!defined('WP_DEBUG_LOG')) {
+          define('WP_DEBUG_LOG', true);
+        }
+        if (!defined('SCRIPT_DEBUG')) {
+          define('SCRIPT_DEBUG', true);
+        }
+        if (!defined('FS_METHOD')) {
+          define('FS_METHOD', 'direct');
+        }
+        if (!defined('AUTOMATIC_UPDATER_DISABLED')) {
+          define('AUTOMATIC_UPDATER_DISABLED', true);
+        }
+        if (!defined('WP_MEMORY_LIMIT')) {
+          define('WP_MEMORY_LIMIT', '256M');
+        }
+    volumes:
+      - wordpress_data:/var/www/html
+      - ./:/var/www/html/wp-content/themes/aumaru
+
+  wp-cli:
+    image: wordpress:cli-php8.2
+    user: "33:33"
+    restart: "no"
+    depends_on:
+      db:
+        condition: service_healthy
+      wordpress:
+        condition: service_started
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-aumaru}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
+      WP_URL: http://localhost:${WORDPRESS_PORT:-8080}
+      WP_TITLE: ${WORDPRESS_SITE_TITLE:-Aumaru Local}
+      WP_ADMIN_USER: ${WORDPRESS_ADMIN_USER:-admin}
+      WP_ADMIN_PASSWORD: ${WORDPRESS_ADMIN_PASSWORD:-admin}
+      WP_ADMIN_EMAIL: ${WORDPRESS_ADMIN_EMAIL:-admin@example.com}
+    volumes:
+      - wordpress_data:/var/www/html
+      - ./:/var/www/html/wp-content/themes/aumaru
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        set -eu
+        until wp config path --allow-root --path=/var/www/html >/dev/null 2>&1; do
+          sleep 5
+        done
+        mkdir -p /var/www/html/wp-content/upgrade
+        if ! wp core is-installed --allow-root --path=/var/www/html >/dev/null 2>&1; then
+          wp core install \
+            --allow-root \
+            --path=/var/www/html \
+            --url="$${WP_URL}" \
+            --title="$${WP_TITLE}" \
+            --admin_user="$${WP_ADMIN_USER}" \
+            --admin_password="$${WP_ADMIN_PASSWORD}" \
+            --admin_email="$${WP_ADMIN_EMAIL}"
+        fi
+        wp theme activate aumaru --allow-root --path=/var/www/html
+        if ! wp plugin is-installed woocommerce --allow-root --path=/var/www/html; then
+          wp plugin install woocommerce --activate --allow-root --path=/var/www/html
+        else
+          wp plugin activate woocommerce --allow-root --path=/var/www/html
+        fi
+
+volumes:
+  db_data:
+  wordpress_data:
