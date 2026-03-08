@@ -128,6 +128,16 @@ function load_dashicons_for_guests() {
 }
 add_action('wp_enqueue_scripts', 'load_dashicons_for_guests');
 
+add_filter('wcpay_upe_params', function ($params) {
+    $params['appearance'] = [
+        'variables' => [
+            'colorText' => '#333333',
+            'colorTextPlaceholder' => '#666666',
+        ]
+    ];
+    return $params;
+});
+
 /*
 function aumaru_merge_wcpay_appearance_rule($rules, $selector, $styles) {
     $current_styles = isset($rules->{$selector}) ? (array) $rules->{$selector} : [];
