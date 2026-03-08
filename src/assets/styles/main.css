@@ -511,22 +511,20 @@ form.wpcf7-form p:last-child {
 }
 */
 
-#payment .payment_method_woocommerce_payments>label {
-  color: yellow !important;
+/* Stripe Background Card */
+#payment .payment_method_woocommerce_payments>label,
+#payment label[data-automation-id="woo-commerce-subscription-opt-in"] span,
+#payment .woocommerce-privacy-policy-text p {
+  color: white !important;
 }
 
+/* Strip Payment Card */
 #payment .payment_method_woocommerce_payments .payment_box label {
-  color: blue !important;
+  color: #515151 !important;
 }
 
-#payment label[data-automation-id="woo-commerce-subscription-opt-in"] span {
-  color: red !important;
-}
-
+/*
 #payment .woocommerce-privacy-policy-text {
   color: green !important;
 }
-
-#payment .woocommerce-privacy-policy-text p {
-  color: purple !important;
-}
+*/
