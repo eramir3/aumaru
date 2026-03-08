@@ -19,7 +19,7 @@ docker compose up -d
 To compile and build tailwind go to theme folder and run the following command
 
 ```
-npx run tailwind
+npm run tailwind
 ```
 
 ## To synchronize local env with host env
