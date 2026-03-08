@@ -519,9 +519,11 @@ form.wpcf7-form p:last-child {
 }
 
 /* Strip Payment Card */
+/*
 #payment .payment_method_woocommerce_payments .payment_box label {
   color: #515151 !important;
 }
+*/
 
 /*
 #payment .woocommerce-privacy-policy-text {
