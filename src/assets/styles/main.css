@@ -505,3 +505,9 @@ form.wpcf7-form p:last-child {
 #payment .payment_method_woocommerce_payments .payment_box label {
   color: white !important;
 }
+
+/* Stripe Payment Card */
+div.payment_box payment_method_woocommerce_payments::before,
+.payment_box .payment_method_woocommerce_payments {
+  color: #7f54b3
+}
