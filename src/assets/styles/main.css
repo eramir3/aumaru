@@ -45,7 +45,7 @@ ul.products {
   }
 }
 
-section > ul.products {
+section>ul.products {
   column-gap: 80px;
 
   @media (width > 992px) {
@@ -53,7 +53,7 @@ section > ul.products {
   }
 }
 
-ul.products > li {
+ul.products>li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,6 +93,7 @@ a.added_to_cart.wc-forward {
   margin-top: 50px;
   clear: both;
   margin: 50px;
+
   @media (width > 576px) {
     margin: 20px;
   }
@@ -159,8 +160,9 @@ ul.tabs .active::after {
   margin-top: 70px;
 }
 
-.related > h2 {
+.related>h2 {
   text-align: center;
+
   @media (width > 576px) {
     text-align: left;
   }
@@ -247,6 +249,7 @@ ul.tabs .active::after {
   border-radius: 10px;
   padding: 20px;
   min-width: 280px;
+
   @media (width > 576px) {
     float: right;
   }
@@ -260,7 +263,7 @@ ul.tabs .active::after {
   margin: 20px 0;
 }
 
-.quantity > input {
+.quantity>input {
   color: black;
   padding-left: 5px;
   max-width: 60px;
@@ -288,14 +291,16 @@ ul.tabs .active::after {
   border-radius: 2px;
   margin-right: 6px;
   width: 100%;
+
   @media (width > 576px) {
     width: 48%;
   }
 }
 
-.coupon .input-text + .button {
+.coupon .input-text+.button {
   margin-top: 10px;
   width: 100% !important;
+
   @media (width > 576px) {
     margin-top: 0;
     width: 48% !important;
@@ -491,4 +496,10 @@ form.wpcf7-form p:last-child {
   .dropdown-content a {
     padding: 10px 10px 0 10px;
   }
+}
+
+/* Stripe checkout labels */
+#payment .wc-stripe-elements-field label,
+#payment label {
+  color: #444 !important;
 }
