@@ -1,4 +1,4 @@
-# AUMARU
+# AUMARÚ
 
 ## Installation
 

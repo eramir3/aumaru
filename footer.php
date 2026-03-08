@@ -6,8 +6,8 @@
     class="max-w-screen-xxl m-auto mt-12 lg:flex lg:justify-between lg:items-center lg:mt-2 lg:px-20"
   >
     <div class="flex flex-col items-center font-extrabold lg:items-start">
-      <a href="<?php echo site_url('/mentions-legales') ?>">Mentions Légales</a>
-      <a href="<?php echo site_url('/conditionnes-generales-de-vente') ?>">Conditionnes Generales De Vente</a>
+      <a href="<?php echo esc_url(home_url('/mentions-legales')) ?>">Mentions Légales</a>
+      <a href="<?php echo esc_url(home_url('/conditionnes-generales-de-vente')) ?>">Conditionnes Generales De Vente</a>
     </div>
     <div class="flex flex-col items-center mt-12 lg:mt-6 lg:mr-32">
       <img class="w-28" src="<?php echo get_theme_file_uri('/src/assets/images/green-logo.png'); ?>" />

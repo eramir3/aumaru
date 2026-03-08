@@ -25,7 +25,7 @@
     class="flex flex-col lg:flex-row xl:justify-between justify-center items-center bg-[#F9F6F2]"
     >
     <div class="block lg:hidden flex w-full justify-between px-8">
-      <a href="<?php echo site_url('/') ?>">
+      <a href="<?php echo esc_url(home_url('/')); ?>">
         <img
           class="min-w-16 py-2"
           src="<?php echo get_theme_file_uri('/src/assets/images/navbar-logo.png'); ?>"
@@ -66,23 +66,7 @@
     >
       <ul class="flex flex-col lg:flex-row lg:gap-14 items-center">
         <li></li>
-        <li>
-          <a
-            href="<?php echo site_url('/about-us') ?>"
-            class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
-          >
-            <span>QUI SOMMES-NOUS</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="<?php echo site_url('/shop') ?>"
-            class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
-          >
-            <span>PRODUITS</span>
-          </a>
-        </li>
-        <a href="<?php echo site_url('/') ?>">
+        <a href="<?php echo esc_url(home_url('/')); ?>">
           <img
             src="<?php echo get_theme_file_uri('/src/assets/images/navbar-logo.png'); ?>"
             width="120"
@@ -90,24 +74,48 @@
           />
         </a>
         <li>
+          <a
+            href="<?php echo esc_url(home_url('/about-us')); ?>"
+            class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
+          >
+            <span>QUI SOMMES-NOUS</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="<?php echo esc_url(home_url('/shop')); ?>"
+            class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
+          >
+            <span>PRODUITS</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="<?php echo esc_url(home_url('/2025/02/20/livre-de-recettes/')); ?>"
+            class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
+          >
+            <span>RECETTES</span>
+          </a>
+        </li>
+        <li>
           <div class="dropdown flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway">
             <span class="dropbtn">CONNAÎTRE PLUS</span>
             <span class="dashicons dashicons-arrow-down"></span>
             <div class="dropdown-content">
               <a
-                href="<?php echo site_url('/learn-more') ?>"
+                href="<?php echo esc_url(home_url('/learn-more')); ?>"
                 class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
               >
                 <span>NOUVELLES</span>
               </a>
               <a
-                href="<?php echo site_url('/events') ?>"
+                href="<?php echo esc_url(home_url('/events')); ?>"
                 class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
               >
                 <span>ÉVÉNEMENTS</span>
               </a>
               <a
-                href="<?php echo site_url('/services') ?>"
+                href="<?php echo esc_url(home_url('/services')); ?>"
                 class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
               >
                 <span>SERVICE TRAITEUR</span>
@@ -117,14 +125,14 @@
         </li>
         <li>
           <a
-            href="<?php echo site_url('/contact') ?>"
+            href="<?php echo esc_url(home_url('/contact')); ?>"
             class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
           >
             <span>CONTACT</span>
           </a>
         </li>
         <li>
-          <a href="<?php echo site_url('/cart') ?>">
+          <a href="<?php echo esc_url(home_url('/cart')); ?>">
             <span class="lg:hidden text-gray-600 hover:text-gray-900 font-raleway">CART</span>
             <div class="lg:flex items-center text-[#598170] hidden">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#598170" viewBox="0 0 256 256"><path d="M239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM88,200a16,16,0,1,0,16,16A16,16,0,0,0,88,200Zm104,0a16,16,0,1,0,16,16A16,16,0,0,0,192,200Z"></path></svg>
