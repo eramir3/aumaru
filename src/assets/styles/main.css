@@ -501,10 +501,32 @@ form.wpcf7-form p:last-child {
 
 /* Stripe */
 /* Target the actual WooPayments label text instead of the container wrapper. */
+/*
 #payment .payment_method_woocommerce_payments > label,
 #payment .payment_method_woocommerce_payments .payment_box label,
 #payment label[data-automation-id="woo-commerce-subscription-opt-in"] span,
 #payment .woocommerce-privacy-policy-text,
 #payment .woocommerce-privacy-policy-text p {
   color: white !important;
+}
+*/
+
+#payment .payment_method_woocommerce_payments>label {
+  color: yellow !important;
+}
+
+#payment .payment_method_woocommerce_payments .payment_box label {
+  color: blue !important;
+}
+
+#payment label[data-automation-id="woo-commerce-subscription-opt-in"] span {
+  color: red !important;
+}
+
+#payment .woocommerce-privacy-policy-text {
+  color: green !important;
+}
+
+#payment .woocommerce-privacy-policy-text p {
+  color: purple !important;
 }
