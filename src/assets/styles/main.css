@@ -498,16 +498,13 @@ form.wpcf7-form p:last-child {
   }
 }
 
-/* Stripe checkout labels */
-#payment .wc-stripe-elements-field label,
-#payment label {
-  color: #515151 !important;
-}
 
-
-/* "Carte" title in Stripe card section */
-.payment_method_woocommerce_payments,
-label[data-automation-id="woo-commerce-subscription-opt-in"] span,
-.woocommerce-privacy-policy-text p {
+/* Stripe */
+/* Target the actual WooPayments label text instead of the container wrapper. */
+#payment .payment_method_woocommerce_payments > label,
+#payment .payment_method_woocommerce_payments .payment_box label,
+#payment label[data-automation-id="woo-commerce-subscription-opt-in"] span,
+#payment .woocommerce-privacy-policy-text,
+#payment .woocommerce-privacy-policy-text p {
   color: white !important;
 }

@@ -1,12 +1,22 @@
 <?php 
 
+function aumaru_asset_version($relative_path) {
+  $file_path = get_theme_file_path($relative_path);
+
+  if (file_exists($file_path)) {
+    return (string) filemtime($file_path);
+  }
+
+  return wp_get_theme()->get('Version');
+}
+
 function aumaru_files() {
   wp_enqueue_script('font-awesome','//kit.fontawesome.com/2be1bd9f3a.js', NULL, '1.0', true);
   wp_enqueue_script('bootstrap-js','//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js', array('jquery'), '1.0', true);
   wp_enqueue_script('aumaru_carousel-js', get_theme_file_uri('/src/assets/js/responsive-menu.js'), NULL, '1.0', true);
-  wp_enqueue_style('tailwind_output_styles', get_theme_file_uri('/src/output.css'));
-  wp_enqueue_style('aumaru_main_styles', get_theme_file_uri('/src/assets/styles/main.css'));
-  wp_enqueue_style('aumaru_carousel_styles', get_theme_file_uri('/src/assets/styles/carousel.css'));
+  wp_enqueue_style('tailwind_output_styles', get_theme_file_uri('/src/output.css'), array(), aumaru_asset_version('/src/output.css'));
+  wp_enqueue_style('aumaru_main_styles', get_theme_file_uri('/src/assets/styles/main.css'), array('tailwind_output_styles'), aumaru_asset_version('/src/assets/styles/main.css'));
+  wp_enqueue_style('aumaru_carousel_styles', get_theme_file_uri('/src/assets/styles/carousel.css'), array('aumaru_main_styles'), aumaru_asset_version('/src/assets/styles/carousel.css'));
   //wp_enqueue_style('aumaru_main_styles', get_stylesheet_uri());
 }
 
@@ -117,3 +127,77 @@ function load_dashicons_for_guests() {
     }
 }
 add_action('wp_enqueue_scripts', 'load_dashicons_for_guests');
+
+function aumaru_merge_wcpay_appearance_rule($rules, $selector, $styles) {
+    $current_styles = isset($rules->{$selector}) ? (array) $rules->{$selector} : [];
+    $rules->{$selector} = (object) array_merge($current_styles, $styles);
+}
+
+function aumaru_set_wcpay_elements_appearance($appearance, $elements_location) {
+    if (!in_array($elements_location, ['shortcode_checkout', 'blocks_checkout'], true)) {
+        return $appearance;
+    }
+
+    if (!is_object($appearance)) {
+        $appearance = new stdClass();
+    }
+
+    if (!isset($appearance->rules) || !is_object($appearance->rules)) {
+        $appearance->rules = new stdClass();
+    }
+
+    $text_rules = [
+        '.Header' => ['color' => '#FFFFFF'],
+        '.Label' => ['color' => '#FFFFFF'],
+        '.Text' => ['color' => '#FFFFFF'],
+        '.Footer' => ['color' => '#FFFFFF'],
+        '.Footer--link' => ['color' => '#FFFFFF'],
+        '.Tab' => ['color' => '#FFFFFF'],
+        '.Tab--selected' => ['color' => '#FFFFFF'],
+        '.TabLabel' => ['color' => '#FFFFFF'],
+        '.TabIcon' => ['color' => '#FFFFFF'],
+        '.TabIcon--selected' => ['color' => '#FFFFFF'],
+    ];
+
+    foreach ($text_rules as $selector => $styles) {
+        aumaru_merge_wcpay_appearance_rule($appearance->rules, $selector, $styles);
+    }
+
+    return $appearance;
+}
+add_filter('wcpay_elements_appearance', 'aumaru_set_wcpay_elements_appearance', 10, 2);
+
+function aumaru_refresh_wcpay_appearance_cache() {
+    if (!class_exists('WC_Payment_Gateway_WCPay')) {
+        return;
+    }
+
+    $appearance_version = '20260308_1';
+    $option_name = 'aumaru_wcpay_appearance_version';
+
+    if (get_option($option_name) === $appearance_version) {
+        return;
+    }
+
+    $transients = [
+        WC_Payment_Gateway_WCPay::UPE_APPEARANCE_TRANSIENT,
+        WC_Payment_Gateway_WCPay::UPE_ADD_PAYMENT_METHOD_APPEARANCE_TRANSIENT,
+        WC_Payment_Gateway_WCPay::WC_BLOCKS_UPE_APPEARANCE_TRANSIENT,
+        WC_Payment_Gateway_WCPay::UPE_BNPL_PRODUCT_PAGE_APPEARANCE_TRANSIENT,
+        WC_Payment_Gateway_WCPay::UPE_BNPL_CLASSIC_CART_APPEARANCE_TRANSIENT,
+        WC_Payment_Gateway_WCPay::UPE_BNPL_CART_BLOCK_APPEARANCE_TRANSIENT,
+        WC_Payment_Gateway_WCPay::UPE_APPEARANCE_THEME_TRANSIENT,
+        WC_Payment_Gateway_WCPay::UPE_ADD_PAYMENT_METHOD_APPEARANCE_THEME_TRANSIENT,
+        WC_Payment_Gateway_WCPay::WC_BLOCKS_UPE_APPEARANCE_THEME_TRANSIENT,
+        WC_Payment_Gateway_WCPay::UPE_BNPL_PRODUCT_PAGE_APPEARANCE_THEME_TRANSIENT,
+        WC_Payment_Gateway_WCPay::UPE_BNPL_CLASSIC_CART_APPEARANCE_THEME_TRANSIENT,
+        WC_Payment_Gateway_WCPay::UPE_BNPL_CART_BLOCK_APPEARANCE_THEME_TRANSIENT,
+    ];
+
+    foreach ($transients as $transient_name) {
+        delete_transient($transient_name);
+    }
+
+    update_option($option_name, $appearance_version, false);
+}
+add_action('init', 'aumaru_refresh_wcpay_appearance_cache');
