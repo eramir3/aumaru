@@ -25,4 +25,4 @@ npm run tailwind
 ## To synchronize local env with host env
 1. Download the `wp-content` folder use `cPanelFileManager`
 2. Download the sql dump file with `phpmyadmin`
-3. Go to `http://localhost:8080/`
+3. Go to [Aumaru Local](http://localhost:8080/)

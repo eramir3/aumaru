@@ -501,5 +501,13 @@ form.wpcf7-form p:last-child {
 /* Stripe checkout labels */
 #payment .wc-stripe-elements-field label,
 #payment label {
-  color: #444 !important;
+  color: #515151 !important;
+}
+
+
+/* "Carte" title in Stripe card section */
+.payment_method_woocommerce_payments,
+label[data-automation-id="woo-commerce-subscription-opt-in"] span,
+.woocommerce-privacy-policy-text p {
+  color: white !important;
 }
