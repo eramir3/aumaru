@@ -1,5 +1,5 @@
 <!-- Hardcoded background black as a temporary fix -->
-<div class="flex flex-col" style="background-color: #000; min-height: 100vh;">
+<div class="max-w-screen-xxl m-auto py-16 flex-grow text-white" style="background-color: #000;">
 <?php
 /**
  * Checkout Form
