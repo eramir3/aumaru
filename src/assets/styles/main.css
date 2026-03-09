@@ -357,6 +357,11 @@ td.actions {
   color: #515151 !important;
 }
 
+/* checkbox for 'Expédier à une adresse différente ?' */
+#ship-to-different-address-checkbox {
+  max-width: 20px;
+}
+
 /* empty cart */
 
 .woocommerce .return-to-shop .wc-backward {
