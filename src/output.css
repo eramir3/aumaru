@@ -898,6 +898,11 @@ video {
   background-color: rgb(249 246 242 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\/assets\/images\/about-us-bg\.png\'\)\]{
   background-image: url('./assets/images/about-us-bg.png');
 }
@@ -1112,6 +1117,13 @@ video {
   text-decoration-line: underline;
 }
 
+@media (min-width: 576px){
+  .sm\:bg-black{
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  }
+}
+
 @media (min-width: 768px){
   .md\:m-auto{
     margin: auto;
@@ -1131,6 +1143,10 @@ video {
 
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:bg-transparent{
+    background-color: transparent;
   }
 
   .md\:text-center{
@@ -1261,6 +1277,11 @@ video {
 
   .lg\:gap-y-60{
     row-gap: 15rem;
+  }
+
+  .lg\:bg-black{
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   }
 
   .lg\:px-20{
