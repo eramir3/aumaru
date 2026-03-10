@@ -362,6 +362,10 @@ td.actions {
   max-width: 20px;
 }
 
+.woocommerce ul#shipping_method li input {
+  max-width: 20px;
+}
+
 /* empty cart */
 
 .woocommerce .return-to-shop .wc-backward {
