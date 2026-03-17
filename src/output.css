@@ -1117,13 +1117,6 @@ video {
   text-decoration-line: underline;
 }
 
-@media (min-width: 576px){
-  .sm\:bg-black{
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  }
-}
-
 @media (min-width: 768px){
   .md\:m-auto{
     margin: auto;
@@ -1277,11 +1270,6 @@ video {
 
   .lg\:gap-y-60{
     row-gap: 15rem;
-  }
-
-  .lg\:bg-black{
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   }
 
   .lg\:px-20{

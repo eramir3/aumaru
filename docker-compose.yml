@@ -31,7 +31,7 @@ services:
       - ${WORDPRESS_PORT:-8080}:80
     environment:
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-aumaru}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-granbslj_aumaru}
       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wordpress}
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
       WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX:-wptj_}
@@ -55,10 +55,14 @@ services:
           define('AUTOMATIC_UPDATER_DISABLED', true);
         }
         if (!defined('WP_MEMORY_LIMIT')) {
-          define('WP_MEMORY_LIMIT', '256M');
+          define('WP_MEMORY_LIMIT', '512M');
+        }
+        if (!defined('WP_MAX_MEMORY_LIMIT')) {
+          define('WP_MAX_MEMORY_LIMIT', '512M');
         }
     volumes:
       - wordpress_data:/var/www/html
+      - ./docker/php-memory-limit.ini:/usr/local/etc/php/conf.d/zz-memory-limit.ini:ro
       - ./docker/wordpress.htaccess:/var/www/html/.htaccess:ro
       - ./docker/apache-wordpress.conf:/etc/apache2/conf-enabled/wordpress-local.conf:ro
       # Use the local wp-content snapshot for plugins, uploads, and languages.
@@ -77,7 +81,7 @@ services:
         condition: service_started
     environment:
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-aumaru}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-granbslj_aumaru}
       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-wordpress}
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-wordpress}
       WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX:-wptj_}
@@ -88,6 +92,7 @@ services:
       WP_ADMIN_EMAIL: ${WORDPRESS_ADMIN_EMAIL:-admin@example.com}
     volumes:
       - wordpress_data:/var/www/html
+      - ./docker/php-memory-limit.ini:/usr/local/etc/php/conf.d/zz-memory-limit.ini:ro
       # Match the wordpress service mounts so CLI commands operate on the same content tree.
       - ./wp-content:/var/www/html/wp-content
       # Keep the repo root as the live theme source during development.
