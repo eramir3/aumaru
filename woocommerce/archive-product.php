@@ -47,6 +47,9 @@ NOS PRODUITS
 		Pour toute commande vers d’autres villes en France, veuillez nous contacter via notre 
 		page Instagram, Facebook ou Whatsapp.
 	</p>
+	<p class="mt-6 text-xl" style="font-family: nexa-light">
+		Pour consulter le tableau nutritionnel de chaque produit, veuillez cliquer sur le produit correspondant.
+	</p>
 </div>
 <?php
 
