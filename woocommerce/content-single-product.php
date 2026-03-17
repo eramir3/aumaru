@@ -19,6 +19,8 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 
+$post_name = get_post_field( 'post_name', get_the_ID() );
+
 /**
  * Hook: woocommerce_before_single_product.
  *
@@ -59,18 +61,18 @@ if ( post_password_required() ) {
 		do_action( 'woocommerce_single_product_summary' );
 		?>
     <div class="aumaru-product-nutrition" style="display: flex; gap: 1rem; justify-content: space-evenly; padding-top: 20px;">
-      <img
-        class="aumaru-product-nutrition__image"
-        src="<?php echo esc_url( get_theme_file_uri( '/src/assets/images/nutrition-facts/blackberry-fr.webp' ) ); ?>"
-        alt="<?php esc_attr_e( 'Blackberry nutrition facts in French', 'aumaru' ); ?>"
-        style="width: 250px; height: auto;"
-      />
-      <img
-        class="aumaru-product-nutrition__image"
-        src="<?php echo esc_url( get_theme_file_uri( '/src/assets/images/nutrition-facts/blackberry-en.webp' ) ); ?>"
-        alt="<?php esc_attr_e( 'Blackberry nutrition facts in English', 'aumaru' ); ?>"
-        style="width: 250px; height: auto;"
-      />
+	      <img
+	        class="aumaru-product-nutrition__image"
+	        src="<?php echo esc_url( get_theme_file_uri( '/src/assets/images/nutrition-facts/' . $post_name . '-fr.webp' ) ); ?>"
+	        alt="<?php esc_attr_e( 'Blackberry nutrition facts in French', 'aumaru' ); ?>"
+	        style="width: 250px; height: auto;"
+	      />
+	      <img
+	        class="aumaru-product-nutrition__image"
+	        src="<?php echo esc_url( get_theme_file_uri( '/src/assets/images/nutrition-facts/' . $post_name . '-en.webp' ) ); ?>"
+	        alt="<?php esc_attr_e( 'Blackberry nutrition facts in English', 'aumaru' ); ?>"
+	        style="width: 250px; height: auto;"
+	      />
     </div>
 	</div>
 	<?php
