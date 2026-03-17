@@ -521,3 +521,14 @@ form.wpcf7-form p:last-child {
   background: #7f54b3 !important;
   border: none
 }
+
+.aumaru-product-nutrition__image {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .aumaru-product-nutrition {
+    flex-direction: column;
+    align-items: center;
+  }
+}

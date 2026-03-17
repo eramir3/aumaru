@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<h2>Helloooooo!!!!</h2>
 <div class="flex flex-col h-screen">
   <div class="max-w-screen-xxl m-auto py-16 flex-grow">
     <h1
@@ -142,7 +143,7 @@
       <div
         class="bg-[#1C5259]/35 mx-12 flex flex-col items-center justify-end rounded-3xl min-w-64 max-w-64 h-64"
       >
-        <img src="<?php echo get_theme_file_uri('/src/assets/images/shop/lulo.png'); ?>" class="relative" />
+        <img src="<?php echo get_theme_file_uri('/src/assets/images/shop/curuba.png'); ?>" class="relative" />
         <h3 style="font-family: abril-fatface" class="text-xl">CURUBA</h3>
         <p style="font-family: nexa-light" class="text-base">
           11,50 &#8364; TTC
