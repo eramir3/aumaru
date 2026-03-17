@@ -26,3 +26,11 @@ npm run tailwind
 1. Download the `wp-content` folder use `cPanelFileManager`
 2. Download the sql dump file with `phpmyadmin`
 3. Go to [Aumaru Local](http://localhost:8080/)
+
+## Woocommerce template repo
+
+Repo added as reference for template overrides
+
+```
+https://github.com/woocommerce/woocommerce/tree/trunk/plugins/woocommerce/templates
+```
