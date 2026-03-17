@@ -148,7 +148,6 @@ services:
         ensure_page about-us "About Us"
         ensure_page contact "Contact"
         ensure_page services "Services"
-        ensure_page products "Products"
         ensure_page learn-more "Learn More"
         ensure_page mentions-legales "Mentions Legales"
         ensure_page conditionnes-generales-de-vente "Conditions Generales De Vente"
