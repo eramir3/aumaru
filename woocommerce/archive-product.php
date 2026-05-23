@@ -39,7 +39,7 @@ NOS PRODUITS
   	naturel et sain. Cliquez sur les images pour en savoir plus sur nos produits.
 	</p>
 	<br/>
-	<p class="text-[#EFC897] font-extrabold">La commande minimum est de 2 produits.</p>
+	<p class="text-[#EFC897] font-extrabold">La commande minimale pour la région lyonnaise est de 3 produits. Pour le reste de l'Europe, elle est de 6 produits.</p>
 	<p class="text-[#EFC897] font-extrabold">La commande maximum est de 25 produits.</p>
 	<p class="mt-6 text-xl" style="font-family: nexa-light">
 		Pour toute commande, contactez-nous via notre page Instagram, Facebook ou Whatsapp. 

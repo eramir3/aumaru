@@ -19,6 +19,12 @@
 
 defined( 'ABSPATH' ) || exit;
 
+?>
+<div class="text-[#EFC897] font-extrabold pb-8">
+	<?php echo esc_html__( 'La commande minimale pour la région lyonnaise est de 3 produits. Pour le reste de l\'Europe, elle est de 6 produits.', 'aumaru' ); ?>
+</div>
+<?php
+
 do_action( 'woocommerce_before_cart' ); ?>
 
 <form class="woocommerce-cart-form lg:w-[1000px]" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">

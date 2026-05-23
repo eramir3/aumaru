@@ -560,20 +560,12 @@ video {
   --tw-contain-style:  ;
 }
 
-.relative{
-  position: relative;
-}
-
 .-left-10{
   left: -2.5rem;
 }
 
 .right-12{
   right: 3rem;
-}
-
-.top-8{
-  top: 2rem;
 }
 
 .top-\[240px\]{
@@ -592,29 +584,14 @@ video {
   margin: auto;
 }
 
-.mx-12{
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .my-12{
   margin-top: 3rem;
   margin-bottom: 3rem;
-}
-
-.my-32{
-  margin-top: 8rem;
-  margin-bottom: 8rem;
 }
 
 .mb-10{
@@ -639,6 +616,10 @@ video {
 
 .mb-6{
   margin-bottom: 1.5rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .ml-12{
@@ -685,20 +666,12 @@ video {
   display: table;
 }
 
-.grid{
-  display: grid;
-}
-
 .hidden{
   display: none;
 }
 
 .h-4{
   height: 1rem;
-}
-
-.h-64{
-  height: 16rem;
 }
 
 .h-\[calc\(100vh_-_86px\)\]{
@@ -738,20 +711,12 @@ video {
   min-width: 4rem;
 }
 
-.min-w-64{
-  min-width: 16rem;
-}
-
 .max-w-3xl{
   max-width: 48rem;
 }
 
 .max-w-4xl{
   max-width: 56rem;
-}
-
-.max-w-64{
-  max-width: 16rem;
 }
 
 .max-w-80{
@@ -789,10 +754,6 @@ video {
 .columns-1{
   -moz-columns: 1;
        columns: 1;
-}
-
-.grid-cols-1{
-  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -839,10 +800,6 @@ video {
   gap: 1.5rem;
 }
 
-.gap-60{
-  gap: 15rem;
-}
-
 .gap-8{
   gap: 2rem;
 }
@@ -855,16 +812,16 @@ video {
   border-radius: 0.25rem;
 }
 
-.rounded-3xl{
-  border-radius: 1.5rem;
-}
-
 .rounded-lg{
   border-radius: 0.5rem;
 }
 
 .rounded-xl{
   border-radius: 0.75rem;
+}
+
+.border{
+  border-width: 1px;
 }
 
 .border-t-\[1px\]{
@@ -876,21 +833,16 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-white\/20{
+  border-color: rgb(255 255 255 / 0.2);
+}
+
 .bg-\[\#131313\]\/50{
   background-color: rgb(19 19 19 / 0.5);
 }
 
-.bg-\[\#1C5259\]\/35{
-  background-color: rgb(28 82 89 / 0.35);
-}
-
 .bg-\[\#D9D9D9\]\/30{
   background-color: rgb(217 217 217 / 0.3);
-}
-
-.bg-\[\#EFC897\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 200 151 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#F9F6F2\]{
@@ -901,6 +853,10 @@ video {
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-white\/10{
+  background-color: rgb(255 255 255 / 0.1);
 }
 
 .bg-\[url\(\'\.\/assets\/images\/about-us-bg\.png\'\)\]{
@@ -939,9 +895,9 @@ video {
   padding: 1.5rem;
 }
 
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .px-8{
@@ -1009,6 +965,10 @@ video {
   padding-top: 2rem;
 }
 
+.pb-8{
+  padding-bottom: 2rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1041,14 +1001,14 @@ video {
   line-height: 1;
 }
 
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl{
@@ -1064,9 +1024,8 @@ video {
   font-weight: 600;
 }
 
-.text-\[\#384238\]{
-  --tw-text-opacity: 1;
-  color: rgb(56 66 56 / var(--tw-text-opacity));
+.leading-relaxed{
+  line-height: 1.625;
 }
 
 .text-\[\#598170\]{
@@ -1134,16 +1093,17 @@ video {
     display: block;
   }
 
-  .md\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .md\:bg-transparent{
     background-color: transparent;
   }
 
   .md\:text-center{
     text-align: center;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1154,10 +1114,6 @@ video {
 
   .lg\:relative{
     position: relative;
-  }
-
-  .lg\:col-span-2{
-    grid-column: span 2 / span 2;
   }
 
   .lg\:m-0{
@@ -1176,10 +1132,6 @@ video {
 
   .lg\:ml-10{
     margin-left: 2.5rem;
-  }
-
-  .lg\:ml-12{
-    margin-left: 3rem;
   }
 
   .lg\:mr-32{
@@ -1236,10 +1188,6 @@ video {
          columns: 2;
   }
 
-  .lg\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .lg\:flex-row{
     flex-direction: row;
   }
@@ -1262,14 +1210,6 @@ video {
 
   .lg\:gap-14{
     gap: 3.5rem;
-  }
-
-  .lg\:gap-4{
-    gap: 1rem;
-  }
-
-  .lg\:gap-y-60{
-    row-gap: 15rem;
   }
 
   .lg\:px-20{
