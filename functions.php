@@ -275,19 +275,19 @@ function aumaru_get_zip_quantity_violation($zip_code) {
   );
 }
 
-function aumaru_is_below_zip_minimum($zip_code) {
-  if (!WC()->cart) {
-    return false;
-  }
+// function aumaru_is_below_zip_minimum($zip_code) {
+//   if (!WC()->cart) {
+//     return false;
+//   }
 
-  $rule = aumaru_get_zip_quantity_rule($zip_code);
+//   $rule = aumaru_get_zip_quantity_rule($zip_code);
 
-  if (!$rule) {
-    return false;
-  }
+//   if (!$rule) {
+//     return false;
+//   }
 
-  return (int) WC()->cart->get_cart_contents_count() < max(0, (int) $rule['min']);
-}
+//   return (int) WC()->cart->get_cart_contents_count() < max(0, (int) $rule['min']);
+// }
 
 function aumaru_get_zip_quantity_error_message($violation) {
   $group_suffix = '';
@@ -314,18 +314,18 @@ function aumaru_is_checkout_submission() {
   return !empty($_POST['woocommerce-process-checkout-nonce']);
 }
 
-function aumaru_maybe_hide_cart_checkout_button() {
-  if (!function_exists('is_cart') || !is_cart()) {
-    return;
-  }
+// function aumaru_maybe_hide_cart_checkout_button() {
+//   if (!function_exists('is_cart') || !is_cart()) {
+//     return;
+//   }
 
-  if (!aumaru_is_below_zip_minimum(aumaru_get_validation_zip_code())) {
-    return;
-  }
+//   if (!aumaru_is_below_zip_minimum(aumaru_get_validation_zip_code())) {
+//     return;
+//   }
 
-  remove_action('woocommerce_proceed_to_checkout', 'woocommerce_button_proceed_to_checkout', 20);
-}
-add_action('wp', 'aumaru_maybe_hide_cart_checkout_button');
+//   remove_action('woocommerce_proceed_to_checkout', 'woocommerce_button_proceed_to_checkout', 20);
+// }
+// add_action('wp', 'aumaru_maybe_hide_cart_checkout_button');
 
 function aumaru_validate_zip_quantity_on_cart() {
   if (aumaru_is_checkout_submission()) {
