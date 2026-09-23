@@ -103,7 +103,7 @@ ul.tabs {
   display: inline-block;
   list-style: none;
   padding: 0 0 0 1em;
-  margin: 0 0 1.618em;
+  margin: 50px 0 1.618em;
   overflow: hidden;
   position: relative;
 }
@@ -190,6 +190,7 @@ ul.tabs .active::after {
   width: 100%;
   height: auto;
   box-shadow: none;
+  border-radius: 10px;
 }
 
 .woocommerce img,
@@ -240,11 +241,9 @@ ul.tabs .active::after {
 }
 
 .summary {
-  margin: 0 auto;
   float: none;
   width: 48%;
   clear: none;
-  margin-top: 100px;
   background-color: rgb(0 0 0 / 0.55);
   border-radius: 10px;
   padding: 20px;
@@ -253,6 +252,10 @@ ul.tabs .active::after {
   @media (width > 576px) {
     float: right;
   }
+}
+
+.woocommerce-LoopProduct-link img {
+  border-radius: 10px;
 }
 
 .single_add_to_cart_button {

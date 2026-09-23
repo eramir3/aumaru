@@ -50,6 +50,26 @@ function aumaru_features() {
 
 add_action('after_setup_theme', 'aumaru_features');
 
+function aumaru_redirect_shop_to_pulp_category() {
+  if (!function_exists('is_shop') || !is_shop() || !in_array($_SERVER['REQUEST_METHOD'] ?? 'GET', array('GET', 'HEAD'), true)) {
+    return;
+  }
+
+  $pulp_category = get_term_by('slug', 'fruit-pulp', 'product_cat');
+
+  if (!$pulp_category) {
+    return;
+  }
+
+  $target_url = get_term_link($pulp_category);
+
+  if (!is_wp_error($target_url)) {
+    wp_safe_redirect($target_url, 301);
+    exit;
+  }
+}
+add_action('template_redirect', 'aumaru_redirect_shop_to_pulp_category', 1);
+
 
 // update cart in shop section
 add_filter( 'woocommerce_add_to_cart_fragments', 'cart_counter_add_to_cart_fragment' );

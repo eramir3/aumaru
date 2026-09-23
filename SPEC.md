@@ -2,15 +2,15 @@
 
 ## Purpose and scope
 
-Aumarú is a WordPress theme for a French-language fruit pulp storefront. It presents the brand, products, news, events, services, and contact information, and provides a WooCommerce shopping flow. This document describes the behavior currently implemented in this repository; WordPress content, product records, orders, and plugin settings live outside the tracked theme.
+Aumarú is a WordPress theme for a French-language fruit storefront with fruit pulps and dried fruits. It presents the brand, products, news, events, services, and contact information, and provides a WooCommerce shopping flow. This document describes the behavior currently implemented in this repository; WordPress content, product records, orders, and plugin settings live outside the tracked theme.
 
 ## Site experience
 
 - **Home:** A branded landing page with a rotating fruit image carousel and links to Instagram, Facebook, and WhatsApp (`front-page.php`).
-- **Navigation:** Links to About Us, Shop, a recipe article, Learn More, Events, Services, Contact, and Cart. The cart badge updates through WooCommerce cart fragments (`header.php`, `functions.php`).
+- **Navigation:** Links to About Us, a recipe article, Learn More, Events, Services, Contact, and Cart. The PRODUITS dropdown follows the same hover and mobile tap behavior as CONNAÎTRE PLUS and links directly to both product categories. The cart badge updates through WooCommerce cart fragments (`header.php`, `functions.php`).
 - **Content pages:** Dedicated About Us, Contact, and Services templates; a generic page template for other pages. The blog index lists posts, categories, excerpts, and featured images; single posts show the full content.
 - **Events:** A public `event` post type at `/events`. The archive shows excerpts, optional featured images, and dates from the `event_date` custom field. Its main query includes only events dated today or later and sorts by that field in ascending order (`functions.php`, `archive-event.php`). The archive uses Advanced Custom Fields' `get_field()`.
-- **Shop:** WooCommerce archive and product templates present the catalog and product details. Product pages include French and English nutrition images looked up by product slug at `src/assets/images/nutrition-facts/<slug>-fr.webp` and `<slug>-en.webp`.
+- **Shop:** `/shop/` permanently redirects to `/product-category/fruit-pulp/`. Category URLs are `/product-category/fruit-pulp/` and `/product-category/dried-fruits/`; display names and copy remain French. WooCommerce archive and product templates present the category catalogs and product details. Product pages show French and English nutrition images when matching files exist at `src/assets/images/nutrition-facts/<slug>-fr.webp` and `<slug>-en.webp`.
 - **Cart and checkout:** Theme overrides style the cart, empty cart, and checkout form while retaining WooCommerce hooks and purchase behavior. The cart displays quantity guidance in French.
 
 ## Order quantity rules
@@ -28,9 +28,10 @@ Postal codes are normalized before matching. A missing postal code produces no q
 
 - The repository root is the WordPress theme. `style.css` contains the theme metadata; `functions.php` registers theme support, assets, the event type, and commerce hooks.
 - Templates are PHP. Styling comes from Tailwind CSS 3 (`src/input.css` compiled to tracked `src/output.css`) plus `src/assets/styles/main.css` and `carousel.css`. `tailwind.config.js` scans root PHP files, theme JavaScript, and WooCommerce overrides. The menu behavior is in `src/assets/js/responsive-menu.js`; the carousel uses enqueued Bootstrap 3 JavaScript.
-- WooCommerce is required for the store. Advanced Custom Fields is required by the event archive's date display. The `event_date` field and product slug to nutrition image mapping must match the WordPress content.
+- WooCommerce is required for the store. Advanced Custom Fields is required by the event archive's date display. The `event_date` field must match the WordPress content; optional nutrition images follow product slugs.
 - The theme contains French copy and some English WooCommerce strings. It is not a complete localization system.
 - `docker-compose.yml` provides local MariaDB, WordPress, and a WP-CLI setup service. The local `wp-content` snapshot and SQL dump are ignored by Git and are not part of the distributable theme.
+- `scripts/migrate-product-categories.php` renames the existing pulp category without changing its product assignments and creates the dried fruit category. Run it in each WordPress environment after deployment.
 
 ## Expected behavior for changes
 

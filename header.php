@@ -9,6 +9,8 @@
   global $pagename;
   $is_shop_page = function_exists('is_shop') && is_shop();
   $cart_count = function_exists('WC') && WC()->cart ? WC()->cart->get_cart_contents_count() : 0;
+  $pulp_category = get_term_by('slug', 'fruit-pulp', 'product_cat');
+  $dried_category = get_term_by('slug', 'dried-fruits', 'product_cat');
 ?>
 <body class="h-full bg-no-repeat bg-cover
   <?php 
@@ -82,12 +84,28 @@
           </a>
         </li>
         <li>
-          <a
-            href="<?php echo esc_url(home_url('/shop')); ?>"
-            class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
-          >
-            <span>PRODUITS</span>
-          </a>
+          <div class="dropdown flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway">
+            <span class="dropbtn">PRODUITS</span>
+            <span class="dashicons dashicons-arrow-down"></span>
+            <div class="dropdown-content">
+              <?php if ($pulp_category) : ?>
+                <a
+                  href="<?php echo esc_url(get_term_link($pulp_category)); ?>"
+                  class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
+                >
+                  <span>PULPE DE FRUIT</span>
+                </a>
+              <?php endif; ?>
+              <?php if ($dried_category) : ?>
+                <a
+                  href="<?php echo esc_url(get_term_link($dried_category)); ?>"
+                  class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900 font-raleway"
+                >
+                  <span>FRUITS SÉCHÉS</span>
+                </a>
+              <?php endif; ?>
+            </div>
+          </div>
         </li>
         <li>
           <a

@@ -20,6 +20,18 @@ defined( 'ABSPATH' ) || exit;
 global $product;
 
 $post_name = get_post_field( 'post_name', get_the_ID() );
+$nutrition_images = array();
+
+foreach ( array( 'fr' => 'French', 'en' => 'English' ) as $language_code => $language_name ) {
+	$relative_path = '/src/assets/images/nutrition-facts/' . $post_name . '-' . $language_code . '.webp';
+
+	if ( file_exists( get_theme_file_path( $relative_path ) ) ) {
+		$nutrition_images[] = array(
+			'url' => get_theme_file_uri( $relative_path ),
+			'alt' => $post_name . ' nutrition facts in ' . $language_name,
+		);
+	}
+}
 
 /**
  * Hook: woocommerce_before_single_product.
@@ -34,46 +46,46 @@ if ( post_password_required() ) {
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-	<?php
-	/**
-	 * Hook: woocommerce_before_single_product_summary.
-	 *
-	 * @hooked woocommerce_show_product_sale_flash - 10
-	 * @hooked woocommerce_show_product_images - 20
-	 */
-	do_action( 'woocommerce_before_single_product_summary' );
-	?>
-
-	<div class="summary entry-summary">
+	<div class="flex flex-col md:flex-row items-center gap-24 md:gap-4">
 		<?php
 		/**
-		 * Hook: woocommerce_single_product_summary.
+		 * Hook: woocommerce_before_single_product_summary.
 		 *
-		 * @hooked woocommerce_template_single_title - 5
-		 * @hooked woocommerce_template_single_rating - 10
-		 * @hooked woocommerce_template_single_price - 10
-		 * @hooked woocommerce_template_single_excerpt - 20
-		 * @hooked woocommerce_template_single_add_to_cart - 30
-		 * @hooked woocommerce_template_single_meta - 40
-		 * @hooked woocommerce_template_single_sharing - 50
-		 * @hooked WC_Structured_Data::generate_product_data() - 60
+		 * @hooked woocommerce_show_product_sale_flash - 10
+		 * @hooked woocommerce_show_product_images - 20
 		 */
-		do_action( 'woocommerce_single_product_summary' );
+		do_action( 'woocommerce_before_single_product_summary' );
 		?>
-    <div class="aumaru-product-nutrition" style="display: flex; gap: 1rem; justify-content: space-evenly; padding-top: 20px;">
-      <img
-        class="aumaru-product-nutrition__image"
-        src="<?php echo esc_url( get_theme_file_uri( '/src/assets/images/nutrition-facts/' . $post_name . '-fr.webp' ) ); ?>"
-        alt="<?php esc_attr_e( $post_name . ' nutrition facts in French', 'aumaru' ); ?>"
-        style="width: 250px; height: auto;"
-      />
-      <img
-        class="aumaru-product-nutrition__image"
-        src="<?php echo esc_url( get_theme_file_uri( '/src/assets/images/nutrition-facts/' . $post_name . '-en.webp' ) ); ?>"
-        alt="<?php esc_attr_e( $post_name . ' nutrition facts in English', 'aumaru' ); ?>"
-        style="width: 250px; height: auto;"
-      />
-    </div>
+
+		<div class="summary entry-summary">
+			<?php
+			/**
+			 * Hook: woocommerce_single_product_summary.
+			 *
+			 * @hooked woocommerce_template_single_title - 5
+			 * @hooked woocommerce_template_single_rating - 10
+			 * @hooked woocommerce_template_single_price - 10
+			 * @hooked woocommerce_template_single_excerpt - 20
+			 * @hooked woocommerce_template_single_add_to_cart - 30
+			 * @hooked woocommerce_template_single_meta - 40
+			 * @hooked woocommerce_template_single_sharing - 50
+			 * @hooked WC_Structured_Data::generate_product_data() - 60
+			 */
+			do_action( 'woocommerce_single_product_summary' );
+			?>
+			<?php if ( $nutrition_images ) : ?>
+				<div class="aumaru-product-nutrition" style="display: flex; gap: 1rem; justify-content: space-evenly; padding-top: 20px;">
+					<?php foreach ( $nutrition_images as $image ) : ?>
+						<img
+							class="aumaru-product-nutrition__image"
+							src="<?php echo esc_url( $image['url'] ); ?>"
+							alt="<?php echo esc_attr( $image['alt'] ); ?>"
+							style="width: 250px; height: auto;"
+						/>
+					<?php endforeach; ?>
+				</div>
+			<?php endif; ?>
+		</div>
 	</div>
 	<?php
 	/**
