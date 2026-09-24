@@ -1,12 +1,14 @@
 COMPOSE ?= docker compose
 MIGRATION := /var/www/html/wp-content/themes/aumaru/scripts/migrate-product-categories.php
+WP_PATH ?= ../../..
 
 .DEFAULT_GOAL := help
-.PHONY: help tailwind docker-up docker-stop docker-down docker-restart docker-reset docker-reset-data docker-ps docker-logs docker-migrate-categories
+.PHONY: help tailwind migrate-categories docker-up docker-stop docker-down docker-restart docker-reset docker-reset-data docker-ps docker-logs docker-migrate-categories
 
 help:
 	@printf '%s\n' \
 		'tailwind                   Watch and rebuild Tailwind CSS with npm' \
+		'migrate-categories         Run the product category migration with host WP-CLI' \
 		'docker-up                  Start the local stack in the background' \
 		'docker-stop                Stop containers without removing them' \
 		'docker-down                Remove containers and network; keep data volumes' \
@@ -19,6 +21,9 @@ help:
 
 tailwind:
 	npm run tailwind
+
+migrate-categories:
+	wp eval-file scripts/migrate-product-categories.php --path=$(WP_PATH)
 
 docker-up:
 	$(COMPOSE) up -d

@@ -8,7 +8,7 @@ Read `SPEC.md` for the current site behavior before changing the theme. Keep cha
 - `woocommerce/`: WooCommerce template overrides. Preserve relevant WooCommerce hooks and check template compatibility when updating them.
 - `src/input.css`, `tailwind.config.js`, `src/output.css`: Tailwind source, scan configuration, and tracked generated CSS.
 - `src/assets/styles/`, `src/assets/js/`, `src/assets/images/`, `src/assets/fonts/`: Theme styles, menu behavior, images, and fonts.
-- `Makefile`, `docker-compose.yml`, `docker/`: Local WordPress, MariaDB, and WP-CLI commands and environment.
+- `Makefile`, `docker-compose.yml`, `docker/`: Local WordPress, MariaDB, and WP-CLI commands and environment. `make migrate-categories` uses host WP-CLI; `make docker-migrate-categories` uses the container.
 - `scripts/migrate-product-categories.php`: Idempotent WooCommerce category migration; run once in each WordPress environment after deployment.
 - `wp-content/`, `wp-content.zip`, `granbslj_aumaru.sql`: Local snapshots ignored by Git. Do not edit, commit, or rely on these as source files.
 

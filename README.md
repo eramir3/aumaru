@@ -50,7 +50,15 @@ Run the category migration in the local Docker stack with:
 make docker-migrate-categories
 ```
 
-After deploying the theme to another WordPress environment, run this once from the WordPress root with WP-CLI to rename the existing pulp category and create the dried fruit category:
+On a Dockerless WordPress environment with WP-CLI available, run this from the theme directory to rename the existing pulp category and create the dried fruit category:
+
+```
+make migrate-categories
+```
+
+The target assumes the WordPress root is three directories above the theme. For another layout, set `WP_PATH`, for example `make migrate-categories WP_PATH=/path/to/wordpress`.
+
+From the WordPress root, the equivalent direct command is:
 
 ```
 wp eval-file wp-content/themes/aumaru/scripts/migrate-product-categories.php
