@@ -162,6 +162,18 @@ ul.tabs .active::after {
   box-shadow: -2px 2px 0 #fff;
 }
 
+table.variations td.value {
+    color: black;
+}
+
+.variations td.value .reset_variations {
+    color: white;
+}
+
+.quantity input.qty {
+    margin-top: 5px;
+}
+
 .related {
   margin-top: 70px;
 }

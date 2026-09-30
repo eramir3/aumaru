@@ -760,10 +760,6 @@ video {
   flex-direction: column-reverse;
 }
 
-.items-start{
-  align-items: flex-start;
-}
-
 .items-center{
   align-items: center;
 }
@@ -788,6 +784,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-24{
+  gap: 6rem;
+}
+
 .gap-4{
   gap: 1rem;
 }
@@ -802,10 +802,6 @@ video {
 
 .gap-8{
   gap: 2rem;
-}
-
-.gap-24{
-  gap: 6rem;
 }
 
 .self-start{
@@ -1030,6 +1026,10 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline{
+  text-decoration-line: underline;
 }
 
 .filter{
