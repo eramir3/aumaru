@@ -553,7 +553,12 @@ form.wpcf7-form p:last-child {
   border: none
 }
 
-/* Stripe Terms Text */
+/* Stripe Terms Text DELETE */
 p.p-u-lh-u-fs-sm-u-color-textSecondary.u-mt-2.p-TermsText.TermsText.Text--terms {
+  color: white !important;
+}
+
+/* Stripe Terms Text DELETE */
+#payment .payment_method_woocommerce_payments .payment_box .TermsText {
   color: white !important;
 }
