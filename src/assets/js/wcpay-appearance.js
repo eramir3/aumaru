@@ -1,3 +1,4 @@
+// DELETE
 document.addEventListener('wcpay_elements_appearance', function (event) {
   const appearance = event.detail && event.detail.appearance;
 

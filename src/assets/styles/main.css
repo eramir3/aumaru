@@ -552,3 +552,8 @@ form.wpcf7-form p:last-child {
   background: #7f54b3 !important;
   border: none
 }
+
+/* Stripe Terms Text */
+p.p-u-lh-u-fs-sm-u-color-textSecondary.u-mt-2.p-TermsText.TermsText.Text--terms {
+  color: white !important;
+}
