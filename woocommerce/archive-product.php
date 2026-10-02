@@ -67,12 +67,17 @@ if ( $is_pulp_category ) {
 		<p class="pt-8 text-xl" style="font-family: nexa-light">Découvrez notre sélection de fruits séchés. Cliquez sur un produit pour en savoir plus.</p>
 	<?php endif; ?>
 	<br/>
-	<p class="mt-6 text-xl" style="font-family: nexa-light">
-		Livraison gratuite à Lyon et ses alentours à partir de 20 € de commande.
-		Pour le reste de la France, livraison gratuite à partir de 75 € de commande.
-		Professionnels? Envois vers d'autres pays? N'hésitez pas à nous contacter
-		<a href="https://aumaru.com.co/contact/"  class="text-[#EFC897] underline" target="_blank" rel="noopener noreferrer">ici</a>.
-	</p>
+	<?php if ( $is_pulp_category ) : ?>
+		<p class="text-[#EFC897] font-extrabold">La commande minimale pour la région lyonnaise est de 3 produits. Pour le reste de l'Europe, elle est de 6 produits.</p>
+		<p class="text-[#EFC897] font-extrabold">La commande maximum est de 25 produits.</p>
+	<?php elseif ( $is_dried_category ) : ?>
+		<p class="mt-6 text-xl" style="font-family: nexa-light">
+			Livraison gratuite à Lyon et ses alentours à partir de 20 € de commande.
+			Pour le reste de la France, livraison gratuite à partir de 75 € de commande.
+			Professionnels? Envois vers d'autres pays? N'hésitez pas à nous contacter
+			<a href="https://aumaru.com.co/contact/"  class="text-[#EFC897] underline" target="_blank" rel="noopener noreferrer">ici</a>.
+		</p>
+	<?php endif; ?>
 	<?php if ( $is_pulp_category ) : ?>
 		<p class="mt-6 text-xl" style="font-family: nexa-light">
 			Pour consulter le tableau nutritionnel de chaque produit, veuillez cliquer sur le produit correspondant.
