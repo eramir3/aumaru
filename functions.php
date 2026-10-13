@@ -29,6 +29,26 @@ function aumaru_files() {
 
 add_action('wp_enqueue_scripts', 'aumaru_files');
 
+// DELETE
+// Shortcode checkout
+delete_transient( 'wc_stripe_appearance' );
+// Block checkout
+delete_transient( 'wc_stripe_blocks_appearance' );
+// add_filter( 'wc_stripe_upe_params', function ( $stripe_params ) {
+
+//     // Shortcode checkout.
+//     $stripe_params['appearance'] = (object) [
+//         'theme' => 'night',
+//     ];
+
+//     // Block checkout.
+//     $stripe_params['blocksAppearance'] = (object) [
+//         'theme' => 'night',
+//     ];
+
+//     return $stripe_params;
+// } );
+
 
 function aumaru_features() {
   add_theme_support('title-tag');
