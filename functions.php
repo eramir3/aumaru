@@ -18,10 +18,12 @@ function aumaru_files() {
   wp_enqueue_style('aumaru_main_styles', get_theme_file_uri('/src/assets/styles/main.css'), array('tailwind_output_styles'), aumaru_asset_version('/src/assets/styles/main.css'));
   wp_enqueue_style('aumaru_carousel_styles', get_theme_file_uri('/src/assets/styles/carousel.css'), array('aumaru_main_styles'), aumaru_asset_version('/src/assets/styles/carousel.css'));
   // DELETE
-  // if (function_exists('is_checkout') && is_checkout()) {
-  //   wp_enqueue_script('aumaru_wcpay_appearance', get_theme_file_uri('/src/assets/js/wcpay-appearance.js'), array(), aumaru_asset_version('/src/assets/js/wcpay-appearance.js'), false);
-  // }
-  //wp_enqueue_style('aumaru_main_styles', get_stylesheet_uri());
+  wp_enqueue_script('aumaru_wcpay_appearance', get_theme_file_uri('/src/assets/js/wcpay-appearance.js'), array(), aumaru_asset_version('/src/assets/js/wcpay-appearance.js'), false);
+  if (function_exists('is_checkout') && is_checkout()) {
+    error_log('Checkout detected: enqueueing wcpay-appearance.js');
+    wp_enqueue_script('aumaru_wcpay_appearance', get_theme_file_uri('/src/assets/js/wcpay-appearance.js'), array(), aumaru_asset_version('/src/assets/js/wcpay-appearance.js'), false);
+  }
+  wp_enqueue_style('aumaru_main_styles', get_stylesheet_uri());
 }
 
 add_action('wp_enqueue_scripts', 'aumaru_files');
