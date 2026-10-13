@@ -160,7 +160,6 @@ add_action('wp_enqueue_scripts', 'load_dashicons_for_guests');
 delete_transient( 'wc_stripe_appearance' );
 // Block checkout
 delete_transient( 'wc_stripe_blocks_appearance' );
-/*
 add_filter( 'wc_stripe_upe_params', function ( $stripe_params ) {
 
 	// Affects block checkout
@@ -170,8 +169,7 @@ add_filter( 'wc_stripe_upe_params', function ( $stripe_params ) {
 	$stripe_params['appearance'] = (object) [ 'theme' => 'night'	];
 	
 	return $stripe_params;
-} )
-*/
+} );
 
 
 //--------- START OF MIN MAX QUANTITY PLUGIN ----------/
