@@ -6,13 +6,13 @@ document.addEventListener('wcpay_elements_appearance', function (event) {
     return;
   }
 
-    appearance.rules = appearance.rules || {};
+  appearance.rules = appearance.rules || {};
   appearance.rules['.TermsText'] = {
     ...(appearance.rules['.TermsText'] || {}),
-    color: '#ffffff',
+    color: 'red',
   };
 
-  event.detail.appearance.rules['.TermsText'] = {
-      color: '#ffffff'
-  };
+  // event.detail.appearance.rules['.TermsText'] = {
+  //     color: '#ffffff'
+  // };
 });
