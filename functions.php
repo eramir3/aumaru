@@ -23,6 +23,7 @@ function aumaru_files() {
     error_log('Checkout detected: enqueueing wcpay-appearance.js');
     wp_enqueue_script('aumaru_wcpay_appearance', get_theme_file_uri('/src/assets/js/wcpay-appearance.js'), array(), aumaru_asset_version('/src/assets/js/wcpay-appearance.js'), false);
   }
+  
   wp_enqueue_style('aumaru_main_styles', get_stylesheet_uri());
 }
 
